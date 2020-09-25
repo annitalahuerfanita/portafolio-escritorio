@@ -1,0 +1,234 @@
+﻿namespace TurismoReal
+{
+    partial class Main
+    {
+        /// <summary>
+        /// Variable del diseñador necesaria.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Limpiar los recursos que se estén usando.
+        /// </summary>
+        /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Código generado por el Diseñador de Windows Forms
+
+        /// <summary>
+        /// Método necesario para admitir el Diseñador. No se puede modificar
+        /// el contenido de este método con el editor de código.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnFunc = new System.Windows.Forms.Button();
+            this.panelUser = new System.Windows.Forms.Panel();
+            this.btnDeptos = new System.Windows.Forms.Button();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.panelTitulo = new System.Windows.Forms.Panel();
+            this.lbTitulo = new System.Windows.Forms.Label();
+            this.panelCentral = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnMax = new System.Windows.Forms.Button();
+            this.btnMin = new System.Windows.Forms.Button();
+            this.panelMenu.SuspendLayout();
+            this.panelTitulo.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // panelMenu
+            // 
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            this.panelMenu.Controls.Add(this.btnFunc);
+            this.panelMenu.Controls.Add(this.panelUser);
+            this.panelMenu.Controls.Add(this.btnDeptos);
+            this.panelMenu.Controls.Add(this.panelLogo);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(220, 520);
+            this.panelMenu.TabIndex = 0;
+            // 
+            // btnFunc
+            // 
+            this.btnFunc.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFunc.FlatAppearance.BorderSize = 0;
+            this.btnFunc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFunc.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnFunc.Location = new System.Drawing.Point(0, 145);
+            this.btnFunc.Name = "btnFunc";
+            this.btnFunc.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnFunc.Size = new System.Drawing.Size(220, 65);
+            this.btnFunc.TabIndex = 3;
+            this.btnFunc.Text = "FUNCIONARIOS";
+            this.btnFunc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFunc.UseVisualStyleBackColor = true;
+            this.btnFunc.Click += new System.EventHandler(this.btnFunc_Click);
+            this.btnFunc.Leave += new System.EventHandler(this.btnFunc_Leave);
+            // 
+            // panelUser
+            // 
+            this.panelUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.panelUser.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelUser.Location = new System.Drawing.Point(0, 440);
+            this.panelUser.Name = "panelUser";
+            this.panelUser.Size = new System.Drawing.Size(220, 80);
+            this.panelUser.TabIndex = 2;
+            // 
+            // btnDeptos
+            // 
+            this.btnDeptos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDeptos.FlatAppearance.BorderSize = 0;
+            this.btnDeptos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeptos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeptos.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnDeptos.Location = new System.Drawing.Point(0, 80);
+            this.btnDeptos.Name = "btnDeptos";
+            this.btnDeptos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnDeptos.Size = new System.Drawing.Size(220, 65);
+            this.btnDeptos.TabIndex = 1;
+            this.btnDeptos.Text = "DEPARTAMENTOS";
+            this.btnDeptos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeptos.UseVisualStyleBackColor = true;
+            this.btnDeptos.Click += new System.EventHandler(this.btnDeptos_Click);
+            this.btnDeptos.Leave += new System.EventHandler(this.btnDeptos_Leave);
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(220, 80);
+            this.panelLogo.TabIndex = 0;
+            // 
+            // panelTitulo
+            // 
+            this.panelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.panelTitulo.Controls.Add(this.btnMin);
+            this.panelTitulo.Controls.Add(this.btnMax);
+            this.panelTitulo.Controls.Add(this.btnClose);
+            this.panelTitulo.Controls.Add(this.lbTitulo);
+            this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitulo.Location = new System.Drawing.Point(220, 0);
+            this.panelTitulo.Name = "panelTitulo";
+            this.panelTitulo.Size = new System.Drawing.Size(780, 80);
+            this.panelTitulo.TabIndex = 1;
+            // 
+            // lbTitulo
+            // 
+            this.lbTitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbTitulo.AutoSize = true;
+            this.lbTitulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitulo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lbTitulo.Location = new System.Drawing.Point(258, 22);
+            this.lbTitulo.Name = "lbTitulo";
+            this.lbTitulo.Size = new System.Drawing.Size(212, 29);
+            this.lbTitulo.TabIndex = 0;
+            this.lbTitulo.Text = "TURISMO REAL";
+            this.lbTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panelCentral
+            // 
+            this.panelCentral.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelCentral.Location = new System.Drawing.Point(220, 80);
+            this.panelCentral.Name = "panelCentral";
+            this.panelCentral.Size = new System.Drawing.Size(780, 440);
+            this.panelCentral.TabIndex = 2;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnClose.Location = new System.Drawing.Point(750, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(30, 30);
+            this.btnClose.TabIndex = 0;
+            this.btnClose.Text = "X";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnMax
+            // 
+            this.btnMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.btnMax.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.btnMax.FlatAppearance.BorderSize = 0;
+            this.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMax.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnMax.Location = new System.Drawing.Point(719, 0);
+            this.btnMax.Name = "btnMax";
+            this.btnMax.Size = new System.Drawing.Size(30, 30);
+            this.btnMax.TabIndex = 2;
+            this.btnMax.Text = "O";
+            this.btnMax.UseVisualStyleBackColor = false;
+            this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
+            // 
+            // btnMin
+            // 
+            this.btnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.btnMin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.btnMin.FlatAppearance.BorderSize = 0;
+            this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMin.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnMin.Location = new System.Drawing.Point(688, 0);
+            this.btnMin.Margin = new System.Windows.Forms.Padding(3, 0, 3, 12);
+            this.btnMin.Name = "btnMin";
+            this.btnMin.Size = new System.Drawing.Size(30, 30);
+            this.btnMin.TabIndex = 3;
+            this.btnMin.Text = "__";
+            this.btnMin.UseVisualStyleBackColor = false;
+            this.btnMin.Click += new System.EventHandler(this.btnMin_Click_1);
+            // 
+            // Main
+            // 
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1000, 520);
+            this.Controls.Add(this.panelCentral);
+            this.Controls.Add(this.panelTitulo);
+            this.Controls.Add(this.panelMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Form1";
+            this.panelMenu.ResumeLayout(false);
+            this.panelTitulo.ResumeLayout(false);
+            this.panelTitulo.PerformLayout();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel panelMenu;
+        private System.Windows.Forms.Panel panelUser;
+        private System.Windows.Forms.Button btnDeptos;
+        private System.Windows.Forms.Panel panelLogo;
+        private System.Windows.Forms.Button btnFunc;
+        private System.Windows.Forms.Panel panelTitulo;
+        private System.Windows.Forms.Label lbTitulo;
+        private System.Windows.Forms.Panel panelCentral;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnMax;
+        private System.Windows.Forms.Button btnMin;
+    }
+}
+

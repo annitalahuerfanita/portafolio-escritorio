@@ -1,0 +1,12 @@
+C:\Users\user\source\repos\TurismoReal\TurismoReal\bin\Debug\TurismoReal.exe.config
+C:\Users\user\source\repos\TurismoReal\TurismoReal\bin\Debug\TurismoReal.exe
+C:\Users\user\source\repos\TurismoReal\TurismoReal\bin\Debug\TurismoReal.pdb
+C:\Users\user\source\repos\TurismoReal\TurismoReal\obj\Debug\TurismoReal.csprojAssemblyReference.cache
+C:\Users\user\source\repos\TurismoReal\TurismoReal\obj\Debug\TurismoReal.Properties.Resources.resources
+C:\Users\user\source\repos\TurismoReal\TurismoReal\obj\Debug\TurismoReal.csproj.GenerateResource.cache
+C:\Users\user\source\repos\TurismoReal\TurismoReal\obj\Debug\TurismoReal.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\TurismoReal\TurismoReal\obj\Debug\TurismoReal.exe
+C:\Users\user\source\repos\TurismoReal\TurismoReal\obj\Debug\TurismoReal.pdb
+C:\Users\user\source\repos\TurismoReal\TurismoReal\obj\Debug\TurismoReal.Main.resources
+C:\Users\user\source\repos\TurismoReal\TurismoReal\obj\Debug\TurismoReal.Departamentos.resources
+C:\Users\user\source\repos\TurismoReal\TurismoReal\obj\Debug\TurismoReal.Funcionarios.resources
