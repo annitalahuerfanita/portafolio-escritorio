@@ -16,15 +16,5 @@ namespace TurismoReal
         {
             InitializeComponent();
         }
-
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gbDatos_Enter(object sender, EventArgs e)
-        {
-
-        }
     }
 }
