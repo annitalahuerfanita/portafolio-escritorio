@@ -52,14 +52,6 @@ namespace TurismoReal
             Application.Exit();
         }
 
-        private void btnMax_Click(object sender, EventArgs e)
-        {
-            if (WindowState == FormWindowState.Normal)
-                this.WindowState = FormWindowState.Maximized;
-            else
-                this.WindowState = FormWindowState.Normal;
-        }
-
         private void btnMin_Click_1(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -82,6 +74,7 @@ namespace TurismoReal
             childForm.BringToFront();
             childForm.Show();
             lbTitulo.Text = childForm.Text;
+
         }
         #endregion
 
