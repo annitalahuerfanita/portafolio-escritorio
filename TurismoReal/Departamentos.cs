@@ -16,5 +16,17 @@ namespace TurismoReal
         {
             InitializeComponent();
         }
+
+        private async void btnMostrar_Click(object sender, EventArgs e)
+        {
+            var response = await RestHelper.MostrarDepto();
+            rtbMostrar.Text = RestHelper.LectorJson(response);
+        }
+
+        private async void btnBuscar_Click(object sender, EventArgs e)
+        {
+            var response = await RestHelper.BuscarDepto(txtBuscar.Text);
+            rtbMostrar.Text = RestHelper.LectorJson(response);
+        }
     }
 }

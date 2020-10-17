@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Departamentos));
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnListar = new System.Windows.Forms.Button();
+            this.btnMostrar = new System.Windows.Forms.Button();
             this.dgDeptos = new System.Windows.Forms.DataGridView();
             this.btnEditar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
@@ -50,6 +51,7 @@
             this.lbHabitacion = new System.Windows.Forms.Label();
             this.lbBano = new System.Windows.Forms.Label();
             this.txtEdad = new System.Windows.Forms.TextBox();
+            this.rtbMostrar = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgDeptos)).BeginInit();
             this.gbDatos.SuspendLayout();
             this.SuspendLayout();
@@ -58,75 +60,84 @@
             // 
             this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold);
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(603, 31);
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.Location = new System.Drawing.Point(650, 32);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(0);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(104, 44);
+            this.btnBuscar.Size = new System.Drawing.Size(57, 41);
             this.btnBuscar.TabIndex = 48;
-            this.btnBuscar.Text = "BUSCAR";
+            this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnBuscar.UseCompatibleTextRendering = true;
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnEliminar
             // 
             this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(134)))), ((int)(((byte)(134)))));
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold);
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(813, 31);
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.Location = new System.Drawing.Point(773, 32);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(104, 44);
+            this.btnEliminar.Size = new System.Drawing.Size(57, 41);
             this.btnEliminar.TabIndex = 47;
-            this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseCompatibleTextRendering = true;
             this.btnEliminar.UseVisualStyleBackColor = false;
             // 
-            // btnListar
+            // btnMostrar
             // 
-            this.btnListar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnListar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.btnListar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
-            this.btnListar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListar.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
-            this.btnListar.ForeColor = System.Drawing.Color.White;
-            this.btnListar.Location = new System.Drawing.Point(935, 31);
-            this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(134, 44);
-            this.btnListar.TabIndex = 46;
-            this.btnListar.Text = "LISTAR";
-            this.btnListar.UseCompatibleTextRendering = true;
-            this.btnListar.UseVisualStyleBackColor = false;
+            this.btnMostrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnMostrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.btnMostrar.FlatAppearance.BorderSize = 0;
+            this.btnMostrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.btnMostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMostrar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold);
+            this.btnMostrar.ForeColor = System.Drawing.Color.White;
+            this.btnMostrar.Image = ((System.Drawing.Image)(resources.GetObject("btnMostrar.Image")));
+            this.btnMostrar.Location = new System.Drawing.Point(898, 32);
+            this.btnMostrar.Name = "btnMostrar";
+            this.btnMostrar.Size = new System.Drawing.Size(153, 43);
+            this.btnMostrar.TabIndex = 46;
+            this.btnMostrar.Text = "       MOSTRAR";
+            this.btnMostrar.UseCompatibleTextRendering = true;
+            this.btnMostrar.UseVisualStyleBackColor = false;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
             // dgDeptos
             // 
             this.dgDeptos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgDeptos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.dgDeptos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgDeptos.Location = new System.Drawing.Point(393, 121);
+            this.dgDeptos.Location = new System.Drawing.Point(393, 377);
             this.dgDeptos.Name = "dgDeptos";
             this.dgDeptos.RowHeadersWidth = 51;
             this.dgDeptos.RowTemplate.Height = 24;
-            this.dgDeptos.Size = new System.Drawing.Size(674, 387);
+            this.dgDeptos.Size = new System.Drawing.Size(674, 131);
             this.dgDeptos.TabIndex = 45;
             // 
             // btnEditar
             // 
             this.btnEditar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(217)))), ((int)(((byte)(103)))));
+            this.btnEditar.FlatAppearance.BorderSize = 0;
             this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold);
             this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(708, 31);
+            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
+            this.btnEditar.Location = new System.Drawing.Point(712, 32);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(104, 44);
+            this.btnEditar.Size = new System.Drawing.Size(57, 41);
             this.btnEditar.TabIndex = 44;
-            this.btnEditar.Text = "EDITAR";
             this.btnEditar.UseCompatibleTextRendering = true;
             this.btnEditar.UseVisualStyleBackColor = false;
             // 
@@ -135,9 +146,9 @@
             this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.ForeColor = System.Drawing.Color.Silver;
-            this.txtBuscar.Location = new System.Drawing.Point(466, 40);
+            this.txtBuscar.Location = new System.Drawing.Point(504, 41);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(132, 26);
+            this.txtBuscar.Size = new System.Drawing.Size(140, 26);
             this.txtBuscar.TabIndex = 42;
             this.txtBuscar.Text = "Buscar por Id";
             // 
@@ -147,12 +158,12 @@
             this.lbBuscar.AutoSize = true;
             this.lbBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.lbBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBuscar.Location = new System.Drawing.Point(391, 41);
+            this.lbBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBuscar.Location = new System.Drawing.Point(422, 42);
             this.lbBuscar.Name = "lbBuscar";
-            this.lbBuscar.Size = new System.Drawing.Size(68, 24);
+            this.lbBuscar.Size = new System.Drawing.Size(79, 25);
             this.lbBuscar.TabIndex = 43;
-            this.lbBuscar.Text = "Buscar";
+            this.lbBuscar.Text = "Buscar:";
             // 
             // gbDatos
             // 
@@ -188,7 +199,7 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(77, 117);
+            this.label1.Location = new System.Drawing.Point(77, 168);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(13, 13);
             this.label1.TabIndex = 27;
@@ -198,15 +209,18 @@
             // 
             this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.btnAgregar.FlatAppearance.BorderSize = 0;
             this.btnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(115, 387);
+            this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
+            this.btnAgregar.Location = new System.Drawing.Point(99, 387);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(150, 60);
+            this.btnAgregar.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnAgregar.Size = new System.Drawing.Size(168, 56);
             this.btnAgregar.TabIndex = 8;
-            this.btnAgregar.Text = "AGREGAR";
+            this.btnAgregar.Text = "    AGREGAR";
             this.btnAgregar.UseCompatibleTextRendering = true;
             this.btnAgregar.UseVisualStyleBackColor = false;
             // 
@@ -241,9 +255,9 @@
             this.lbEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbEmp.Location = new System.Drawing.Point(17, 321);
             this.lbEmp.Name = "lbEmp";
-            this.lbEmp.Size = new System.Drawing.Size(132, 20);
+            this.lbEmp.Size = new System.Drawing.Size(103, 20);
             this.lbEmp.TabIndex = 18;
-            this.lbEmp.Text = "Correo Empresa";
+            this.lbEmp.Text = "Precio diario";
             // 
             // txtDireccion
             // 
@@ -270,7 +284,7 @@
             this.lbMetros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.lbMetros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbMetros.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMetros.Location = new System.Drawing.Point(17, 117);
+            this.lbMetros.Location = new System.Drawing.Point(17, 168);
             this.lbMetros.Name = "lbMetros";
             this.lbMetros.Size = new System.Drawing.Size(61, 20);
             this.lbMetros.TabIndex = 9;
@@ -285,9 +299,9 @@
             this.lbPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPrecio.Location = new System.Drawing.Point(17, 270);
             this.lbPrecio.Name = "lbPrecio";
-            this.lbPrecio.Size = new System.Drawing.Size(107, 20);
+            this.lbPrecio.Size = new System.Drawing.Size(57, 20);
             this.lbPrecio.TabIndex = 15;
-            this.lbPrecio.Text = "Precio Diario";
+            this.lbPrecio.Text = "Baños";
             // 
             // txtApellido
             // 
@@ -314,11 +328,11 @@
             this.lbHabitacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.lbHabitacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbHabitacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHabitacion.Location = new System.Drawing.Point(17, 168);
+            this.lbHabitacion.Location = new System.Drawing.Point(17, 117);
             this.lbHabitacion.Name = "lbHabitacion";
-            this.lbHabitacion.Size = new System.Drawing.Size(107, 20);
+            this.lbHabitacion.Size = new System.Drawing.Size(45, 20);
             this.lbHabitacion.TabIndex = 11;
-            this.lbHabitacion.Text = "Habitaciones";
+            this.lbHabitacion.Text = "Zona";
             // 
             // lbBano
             // 
@@ -329,9 +343,9 @@
             this.lbBano.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBano.Location = new System.Drawing.Point(17, 219);
             this.lbBano.Name = "lbBano";
-            this.lbBano.Size = new System.Drawing.Size(57, 20);
+            this.lbBano.Size = new System.Drawing.Size(97, 20);
             this.lbBano.TabIndex = 13;
-            this.lbBano.Text = "Baños";
+            this.lbBano.Text = "Dormitorios";
             // 
             // txtEdad
             // 
@@ -342,16 +356,25 @@
             this.txtEdad.Size = new System.Drawing.Size(170, 24);
             this.txtEdad.TabIndex = 12;
             // 
+            // rtbMostrar
+            // 
+            this.rtbMostrar.Location = new System.Drawing.Point(427, 81);
+            this.rtbMostrar.Name = "rtbMostrar";
+            this.rtbMostrar.Size = new System.Drawing.Size(674, 280);
+            this.rtbMostrar.TabIndex = 50;
+            this.rtbMostrar.Text = "";
+            // 
             // Departamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(1060, 545);
+            this.Controls.Add(this.rtbMostrar);
             this.Controls.Add(this.gbDatos);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnListar);
+            this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.dgDeptos);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.txtBuscar);
@@ -371,7 +394,7 @@
 
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnListar;
+        private System.Windows.Forms.Button btnMostrar;
         private System.Windows.Forms.DataGridView dgDeptos;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.TextBox txtBuscar;
@@ -391,5 +414,6 @@
         private System.Windows.Forms.Label lbHabitacion;
         private System.Windows.Forms.Label lbBano;
         private System.Windows.Forms.TextBox txtEdad;
+        private System.Windows.Forms.RichTextBox rtbMostrar;
     }
 }

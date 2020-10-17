@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panelTitulo = new System.Windows.Forms.Panel();
+            this.lbTitulo = new System.Windows.Forms.Label();
             this.btnMin = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.panelCentral = new System.Windows.Forms.Panel();
@@ -36,10 +38,13 @@
             this.btnFunc = new System.Windows.Forms.Button();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panelUser = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbUser = new System.Windows.Forms.Label();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.lbTitulo = new System.Windows.Forms.Label();
             this.panelTitulo.SuspendLayout();
             this.panelMenu.SuspendLayout();
+            this.panelUser.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTitulo
@@ -53,6 +58,18 @@
             this.panelTitulo.Name = "panelTitulo";
             this.panelTitulo.Size = new System.Drawing.Size(1060, 95);
             this.panelTitulo.TabIndex = 1;
+            // 
+            // lbTitulo
+            // 
+            this.lbTitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbTitulo.AutoSize = true;
+            this.lbTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitulo.ForeColor = System.Drawing.Color.White;
+            this.lbTitulo.Location = new System.Drawing.Point(414, 32);
+            this.lbTitulo.Name = "lbTitulo";
+            this.lbTitulo.Size = new System.Drawing.Size(218, 31);
+            this.lbTitulo.TabIndex = 4;
+            this.lbTitulo.Text = "TURISMO REAL";
             // 
             // btnMin
             // 
@@ -107,13 +124,15 @@
             this.btnDeptos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeptos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeptos.ForeColor = System.Drawing.Color.White;
+            this.btnDeptos.Image = ((System.Drawing.Image)(resources.GetObject("btnDeptos.Image")));
+            this.btnDeptos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeptos.Location = new System.Drawing.Point(0, 95);
             this.btnDeptos.Name = "btnDeptos";
             this.btnDeptos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnDeptos.Size = new System.Drawing.Size(240, 75);
             this.btnDeptos.TabIndex = 1;
-            this.btnDeptos.Text = "DEPARTAMENTOS";
-            this.btnDeptos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeptos.Text = "  DEPARTAMENTOS";
+            this.btnDeptos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDeptos.UseVisualStyleBackColor = true;
             this.btnDeptos.Click += new System.EventHandler(this.btnDeptos_Click);
             this.btnDeptos.Leave += new System.EventHandler(this.btnDeptos_Leave);
@@ -125,13 +144,16 @@
             this.btnFunc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFunc.ForeColor = System.Drawing.Color.White;
+            this.btnFunc.Image = ((System.Drawing.Image)(resources.GetObject("btnFunc.Image")));
+            this.btnFunc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFunc.Location = new System.Drawing.Point(0, 170);
             this.btnFunc.Name = "btnFunc";
             this.btnFunc.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnFunc.Size = new System.Drawing.Size(240, 75);
             this.btnFunc.TabIndex = 3;
-            this.btnFunc.Text = "FUNCIONARIOS";
+            this.btnFunc.Text = "  FUNCIONARIOS";
             this.btnFunc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFunc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFunc.UseVisualStyleBackColor = true;
             this.btnFunc.Click += new System.EventHandler(this.btnFunc_Click);
             this.btnFunc.Leave += new System.EventHandler(this.btnFunc_Leave);
@@ -152,11 +174,33 @@
             // panelUser
             // 
             this.panelUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.panelUser.Controls.Add(this.pictureBox1);
+            this.panelUser.Controls.Add(this.lbUser);
             this.panelUser.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelUser.Location = new System.Drawing.Point(0, 560);
             this.panelUser.Name = "panelUser";
             this.panelUser.Size = new System.Drawing.Size(240, 80);
             this.panelUser.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(15, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(42, 42);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lbUser
+            // 
+            this.lbUser.AutoSize = true;
+            this.lbUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUser.ForeColor = System.Drawing.Color.White;
+            this.lbUser.Location = new System.Drawing.Point(63, 30);
+            this.lbUser.Name = "lbUser";
+            this.lbUser.Size = new System.Drawing.Size(149, 20);
+            this.lbUser.TabIndex = 0;
+            this.lbUser.Text = "ADMINISTRADOR";
             // 
             // panelLogo
             // 
@@ -166,18 +210,6 @@
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(240, 95);
             this.panelLogo.TabIndex = 0;
-            // 
-            // lbTitulo
-            // 
-            this.lbTitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbTitulo.AutoSize = true;
-            this.lbTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitulo.ForeColor = System.Drawing.Color.White;
-            this.lbTitulo.Location = new System.Drawing.Point(414, 32);
-            this.lbTitulo.Name = "lbTitulo";
-            this.lbTitulo.Size = new System.Drawing.Size(218, 31);
-            this.lbTitulo.TabIndex = 4;
-            this.lbTitulo.Text = "TURISMO REAL";
             // 
             // Main
             // 
@@ -199,6 +231,9 @@
             this.panelTitulo.ResumeLayout(false);
             this.panelTitulo.PerformLayout();
             this.panelMenu.ResumeLayout(false);
+            this.panelUser.ResumeLayout(false);
+            this.panelUser.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -214,6 +249,8 @@
         private System.Windows.Forms.Panel panelUser;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Label lbTitulo;
+        private System.Windows.Forms.Label lbUser;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
