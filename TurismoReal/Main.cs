@@ -76,8 +76,7 @@ namespace TurismoReal
             lbTitulo.Text = childForm.Text;
 
         }
+
         #endregion
-
-
     }
 }
