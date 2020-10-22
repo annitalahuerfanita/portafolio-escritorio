@@ -46,6 +46,8 @@
             this.gbDatos = new System.Windows.Forms.GroupBox();
             this.rbInactivo = new System.Windows.Forms.RadioButton();
             this.rbActivo = new System.Windows.Forms.RadioButton();
+            this.gbEstado = new System.Windows.Forms.GroupBox();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.lbEstado = new System.Windows.Forms.Label();
             this.dgFunc = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -53,7 +55,6 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lbBuscar = new System.Windows.Forms.Label();
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.rtbMostrar = new System.Windows.Forms.RichTextBox();
             this.gbDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgFunc)).BeginInit();
@@ -217,9 +218,10 @@
             // 
             this.gbDatos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gbDatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
-            this.gbDatos.Controls.Add(this.btnAgregar);
             this.gbDatos.Controls.Add(this.rbInactivo);
             this.gbDatos.Controls.Add(this.rbActivo);
+            this.gbDatos.Controls.Add(this.gbEstado);
+            this.gbDatos.Controls.Add(this.btnAgregar);
             this.gbDatos.Controls.Add(this.lbEstado);
             this.gbDatos.Controls.Add(this.txtCont);
             this.gbDatos.Controls.Add(this.lbCont);
@@ -249,11 +251,10 @@
             this.rbInactivo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rbInactivo.AutoSize = true;
             this.rbInactivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.rbInactivo.Location = new System.Drawing.Point(259, 346);
+            this.rbInactivo.Location = new System.Drawing.Point(258, 346);
             this.rbInactivo.Name = "rbInactivo";
             this.rbInactivo.Size = new System.Drawing.Size(79, 22);
             this.rbInactivo.TabIndex = 26;
-            this.rbInactivo.TabStop = true;
             this.rbInactivo.Text = "Inactivo";
             this.rbInactivo.UseVisualStyleBackColor = true;
             // 
@@ -261,14 +262,43 @@
             // 
             this.rbActivo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rbActivo.AutoSize = true;
+            this.rbActivo.Checked = true;
             this.rbActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.rbActivo.Location = new System.Drawing.Point(173, 346);
+            this.rbActivo.Location = new System.Drawing.Point(176, 346);
             this.rbActivo.Name = "rbActivo";
             this.rbActivo.Size = new System.Drawing.Size(69, 22);
             this.rbActivo.TabIndex = 23;
             this.rbActivo.TabStop = true;
             this.rbActivo.Text = "Activo";
             this.rbActivo.UseVisualStyleBackColor = true;
+            // 
+            // gbEstado
+            // 
+            this.gbEstado.Location = new System.Drawing.Point(170, 329);
+            this.gbEstado.Name = "gbEstado";
+            this.gbEstado.Size = new System.Drawing.Size(172, 46);
+            this.gbEstado.TabIndex = 28;
+            this.gbEstado.TabStop = false;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
+            this.btnAgregar.Location = new System.Drawing.Point(98, 396);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnAgregar.Size = new System.Drawing.Size(168, 56);
+            this.btnAgregar.TabIndex = 27;
+            this.btnAgregar.Text = "    AGREGAR";
+            this.btnAgregar.UseCompatibleTextRendering = true;
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // lbEstado
             // 
@@ -354,13 +384,12 @@
             // txtBuscar
             // 
             this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.ForeColor = System.Drawing.Color.Silver;
+            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.ForeColor = System.Drawing.Color.Black;
             this.txtBuscar.Location = new System.Drawing.Point(504, 41);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(140, 26);
             this.txtBuscar.TabIndex = 49;
-            this.txtBuscar.Text = "Buscar por Id";
             // 
             // lbBuscar
             // 
@@ -374,25 +403,6 @@
             this.lbBuscar.Size = new System.Drawing.Size(79, 25);
             this.lbBuscar.TabIndex = 50;
             this.lbBuscar.Text = "Buscar:";
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
-            this.btnAgregar.FlatAppearance.BorderSize = 0;
-            this.btnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
-            this.btnAgregar.Location = new System.Drawing.Point(98, 396);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnAgregar.Size = new System.Drawing.Size(168, 56);
-            this.btnAgregar.TabIndex = 27;
-            this.btnAgregar.Text = "    AGREGAR";
-            this.btnAgregar.UseCompatibleTextRendering = true;
-            this.btnAgregar.UseVisualStyleBackColor = false;
             // 
             // rtbMostrar
             // 
@@ -455,5 +465,6 @@
         private System.Windows.Forms.Label lbBuscar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.RichTextBox rtbMostrar;
+        private System.Windows.Forms.GroupBox gbEstado;
     }
 }

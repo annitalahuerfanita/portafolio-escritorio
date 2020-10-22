@@ -39,19 +39,19 @@
             this.gbDatos = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.txtEmp = new System.Windows.Forms.TextBox();
-            this.lbDireccion = new System.Windows.Forms.Label();
-            this.lbEmp = new System.Windows.Forms.Label();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
-            this.lbMetros = new System.Windows.Forms.Label();
+            this.lbDireccion = new System.Windows.Forms.Label();
             this.lbPrecio = new System.Windows.Forms.Label();
-            this.txtApellido = new System.Windows.Forms.TextBox();
-            this.txtBano = new System.Windows.Forms.TextBox();
-            this.lbHabitacion = new System.Windows.Forms.Label();
-            this.lbBano = new System.Windows.Forms.Label();
-            this.txtEdad = new System.Windows.Forms.TextBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.txtBanos = new System.Windows.Forms.TextBox();
+            this.lbMetros = new System.Windows.Forms.Label();
+            this.lbBanos = new System.Windows.Forms.Label();
+            this.txtDorm = new System.Windows.Forms.TextBox();
+            this.lbZona = new System.Windows.Forms.Label();
+            this.lbDorm = new System.Windows.Forms.Label();
+            this.txtMetros = new System.Windows.Forms.TextBox();
             this.rtbMostrar = new System.Windows.Forms.RichTextBox();
+            this.cbZona = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgDeptos)).BeginInit();
             this.gbDatos.SuspendLayout();
             this.SuspendLayout();
@@ -92,6 +92,7 @@
             this.btnEliminar.TabIndex = 47;
             this.btnEliminar.UseCompatibleTextRendering = true;
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnMostrar
             // 
@@ -144,13 +145,12 @@
             // txtBuscar
             // 
             this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.ForeColor = System.Drawing.Color.Silver;
+            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.ForeColor = System.Drawing.Color.Black;
             this.txtBuscar.Location = new System.Drawing.Point(504, 41);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(140, 26);
             this.txtBuscar.TabIndex = 42;
-            this.txtBuscar.Text = "Buscar por Id";
             // 
             // lbBuscar
             // 
@@ -169,20 +169,20 @@
             // 
             this.gbDatos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gbDatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.gbDatos.Controls.Add(this.cbZona);
             this.gbDatos.Controls.Add(this.label1);
             this.gbDatos.Controls.Add(this.btnAgregar);
-            this.gbDatos.Controls.Add(this.txtEmp);
-            this.gbDatos.Controls.Add(this.lbDireccion);
-            this.gbDatos.Controls.Add(this.lbEmp);
-            this.gbDatos.Controls.Add(this.txtDireccion);
             this.gbDatos.Controls.Add(this.txtPrecio);
-            this.gbDatos.Controls.Add(this.lbMetros);
+            this.gbDatos.Controls.Add(this.lbDireccion);
             this.gbDatos.Controls.Add(this.lbPrecio);
-            this.gbDatos.Controls.Add(this.txtApellido);
-            this.gbDatos.Controls.Add(this.txtBano);
-            this.gbDatos.Controls.Add(this.lbHabitacion);
-            this.gbDatos.Controls.Add(this.lbBano);
-            this.gbDatos.Controls.Add(this.txtEdad);
+            this.gbDatos.Controls.Add(this.txtDireccion);
+            this.gbDatos.Controls.Add(this.txtBanos);
+            this.gbDatos.Controls.Add(this.lbMetros);
+            this.gbDatos.Controls.Add(this.lbBanos);
+            this.gbDatos.Controls.Add(this.txtDorm);
+            this.gbDatos.Controls.Add(this.lbZona);
+            this.gbDatos.Controls.Add(this.lbDorm);
+            this.gbDatos.Controls.Add(this.txtMetros);
             this.gbDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbDatos.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDatos.Location = new System.Drawing.Point(-7, 37);
@@ -223,15 +223,16 @@
             this.btnAgregar.Text = "    AGREGAR";
             this.btnAgregar.UseCompatibleTextRendering = true;
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // txtEmp
+            // txtPrecio
             // 
-            this.txtEmp.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmp.Location = new System.Drawing.Point(172, 319);
-            this.txtEmp.Name = "txtEmp";
-            this.txtEmp.Size = new System.Drawing.Size(170, 24);
-            this.txtEmp.TabIndex = 19;
+            this.txtPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrecio.Location = new System.Drawing.Point(172, 319);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(170, 24);
+            this.txtPrecio.TabIndex = 6;
             // 
             // lbDireccion
             // 
@@ -246,18 +247,18 @@
             this.lbDireccion.TabIndex = 0;
             this.lbDireccion.Text = "Dirección";
             // 
-            // lbEmp
+            // lbPrecio
             // 
-            this.lbEmp.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbEmp.AutoSize = true;
-            this.lbEmp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
-            this.lbEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEmp.Location = new System.Drawing.Point(17, 321);
-            this.lbEmp.Name = "lbEmp";
-            this.lbEmp.Size = new System.Drawing.Size(103, 20);
-            this.lbEmp.TabIndex = 18;
-            this.lbEmp.Text = "Precio diario";
+            this.lbPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbPrecio.AutoSize = true;
+            this.lbPrecio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.lbPrecio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPrecio.Location = new System.Drawing.Point(17, 321);
+            this.lbPrecio.Name = "lbPrecio";
+            this.lbPrecio.Size = new System.Drawing.Size(103, 20);
+            this.lbPrecio.TabIndex = 18;
+            this.lbPrecio.Text = "Precio diario";
             // 
             // txtDireccion
             // 
@@ -268,14 +269,14 @@
             this.txtDireccion.Size = new System.Drawing.Size(170, 24);
             this.txtDireccion.TabIndex = 1;
             // 
-            // txtPrecio
+            // txtBanos
             // 
-            this.txtPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecio.Location = new System.Drawing.Point(172, 268);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(170, 24);
-            this.txtPrecio.TabIndex = 16;
+            this.txtBanos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtBanos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBanos.Location = new System.Drawing.Point(172, 268);
+            this.txtBanos.Name = "txtBanos";
+            this.txtBanos.Size = new System.Drawing.Size(170, 24);
+            this.txtBanos.TabIndex = 5;
             // 
             // lbMetros
             // 
@@ -290,71 +291,62 @@
             this.lbMetros.TabIndex = 9;
             this.lbMetros.Text = "Metros";
             // 
-            // lbPrecio
+            // lbBanos
             // 
-            this.lbPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbPrecio.AutoSize = true;
-            this.lbPrecio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
-            this.lbPrecio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPrecio.Location = new System.Drawing.Point(17, 270);
-            this.lbPrecio.Name = "lbPrecio";
-            this.lbPrecio.Size = new System.Drawing.Size(57, 20);
-            this.lbPrecio.TabIndex = 15;
-            this.lbPrecio.Text = "Baños";
+            this.lbBanos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbBanos.AutoSize = true;
+            this.lbBanos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.lbBanos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbBanos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBanos.Location = new System.Drawing.Point(17, 270);
+            this.lbBanos.Name = "lbBanos";
+            this.lbBanos.Size = new System.Drawing.Size(57, 20);
+            this.lbBanos.TabIndex = 15;
+            this.lbBanos.Text = "Baños";
             // 
-            // txtApellido
+            // txtDorm
             // 
-            this.txtApellido.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido.Location = new System.Drawing.Point(172, 115);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(170, 24);
-            this.txtApellido.TabIndex = 10;
+            this.txtDorm.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtDorm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDorm.Location = new System.Drawing.Point(172, 217);
+            this.txtDorm.Name = "txtDorm";
+            this.txtDorm.Size = new System.Drawing.Size(170, 24);
+            this.txtDorm.TabIndex = 4;
             // 
-            // txtBano
+            // lbZona
             // 
-            this.txtBano.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBano.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBano.Location = new System.Drawing.Point(172, 217);
-            this.txtBano.Name = "txtBano";
-            this.txtBano.Size = new System.Drawing.Size(170, 24);
-            this.txtBano.TabIndex = 14;
+            this.lbZona.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbZona.AutoSize = true;
+            this.lbZona.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.lbZona.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbZona.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbZona.Location = new System.Drawing.Point(17, 117);
+            this.lbZona.Name = "lbZona";
+            this.lbZona.Size = new System.Drawing.Size(45, 20);
+            this.lbZona.TabIndex = 11;
+            this.lbZona.Text = "Zona";
             // 
-            // lbHabitacion
+            // lbDorm
             // 
-            this.lbHabitacion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbHabitacion.AutoSize = true;
-            this.lbHabitacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
-            this.lbHabitacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbHabitacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHabitacion.Location = new System.Drawing.Point(17, 117);
-            this.lbHabitacion.Name = "lbHabitacion";
-            this.lbHabitacion.Size = new System.Drawing.Size(45, 20);
-            this.lbHabitacion.TabIndex = 11;
-            this.lbHabitacion.Text = "Zona";
+            this.lbDorm.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbDorm.AutoSize = true;
+            this.lbDorm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.lbDorm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbDorm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDorm.Location = new System.Drawing.Point(17, 219);
+            this.lbDorm.Name = "lbDorm";
+            this.lbDorm.Size = new System.Drawing.Size(97, 20);
+            this.lbDorm.TabIndex = 13;
+            this.lbDorm.Text = "Dormitorios";
             // 
-            // lbBano
+            // txtMetros
             // 
-            this.lbBano.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbBano.AutoSize = true;
-            this.lbBano.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
-            this.lbBano.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbBano.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBano.Location = new System.Drawing.Point(17, 219);
-            this.lbBano.Name = "lbBano";
-            this.lbBano.Size = new System.Drawing.Size(97, 20);
-            this.lbBano.TabIndex = 13;
-            this.lbBano.Text = "Dormitorios";
-            // 
-            // txtEdad
-            // 
-            this.txtEdad.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtEdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEdad.Location = new System.Drawing.Point(172, 166);
-            this.txtEdad.Name = "txtEdad";
-            this.txtEdad.Size = new System.Drawing.Size(170, 24);
-            this.txtEdad.TabIndex = 12;
+            this.txtMetros.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtMetros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMetros.Location = new System.Drawing.Point(172, 166);
+            this.txtMetros.Name = "txtMetros";
+            this.txtMetros.Size = new System.Drawing.Size(170, 24);
+            this.txtMetros.TabIndex = 3;
             // 
             // rtbMostrar
             // 
@@ -363,6 +355,21 @@
             this.rtbMostrar.Size = new System.Drawing.Size(674, 280);
             this.rtbMostrar.TabIndex = 50;
             this.rtbMostrar.Text = "";
+            // 
+            // cbZona
+            // 
+            this.cbZona.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbZona.FormattingEnabled = true;
+            this.cbZona.Items.AddRange(new object[] {
+            "Norte",
+            "Sur",
+            "Este",
+            "Oeste"});
+            this.cbZona.Location = new System.Drawing.Point(172, 114);
+            this.cbZona.Name = "cbZona";
+            this.cbZona.Size = new System.Drawing.Size(170, 28);
+            this.cbZona.TabIndex = 2;
+            this.cbZona.Text = " Seleccionar zona";
             // 
             // Departamentos
             // 
@@ -402,18 +409,18 @@
         private System.Windows.Forms.GroupBox gbDatos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.TextBox txtEmp;
-        private System.Windows.Forms.Label lbDireccion;
-        private System.Windows.Forms.Label lbEmp;
-        private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.TextBox txtPrecio;
-        private System.Windows.Forms.Label lbMetros;
+        private System.Windows.Forms.Label lbDireccion;
         private System.Windows.Forms.Label lbPrecio;
-        private System.Windows.Forms.TextBox txtApellido;
-        private System.Windows.Forms.TextBox txtBano;
-        private System.Windows.Forms.Label lbHabitacion;
-        private System.Windows.Forms.Label lbBano;
-        private System.Windows.Forms.TextBox txtEdad;
+        private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.TextBox txtBanos;
+        private System.Windows.Forms.Label lbMetros;
+        private System.Windows.Forms.Label lbBanos;
+        private System.Windows.Forms.TextBox txtDorm;
+        private System.Windows.Forms.Label lbZona;
+        private System.Windows.Forms.Label lbDorm;
+        private System.Windows.Forms.TextBox txtMetros;
         private System.Windows.Forms.RichTextBox rtbMostrar;
+        private System.Windows.Forms.ComboBox cbZona;
     }
 }

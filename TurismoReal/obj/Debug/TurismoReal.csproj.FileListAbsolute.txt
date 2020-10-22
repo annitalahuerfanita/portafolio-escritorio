@@ -25,3 +25,10 @@ C:\Users\aceve\source\repos\TurismoReal\TurismoReal\obj\Debug\TurismoReal.pdb
 C:\Users\aceve\source\repos\TurismoReal\TurismoReal\bin\Debug\Newtonsoft.Json.dll
 C:\Users\aceve\source\repos\TurismoReal\TurismoReal\bin\Debug\Newtonsoft.Json.xml
 C:\Users\aceve\source\repos\TurismoReal\TurismoReal\obj\Debug\TurismoReal.csproj.CopyComplete
+C:\Users\aceve\source\repos\TurismoReal\TurismoReal\bin\Debug\RestSharp.dll
+C:\Users\aceve\source\repos\TurismoReal\TurismoReal\bin\Debug\RestSharp.xml
+C:\Users\user\source\repos\TurismoReal\TurismoReal\bin\Debug\Newtonsoft.Json.dll
+C:\Users\user\source\repos\TurismoReal\TurismoReal\bin\Debug\RestSharp.dll
+C:\Users\user\source\repos\TurismoReal\TurismoReal\bin\Debug\Newtonsoft.Json.xml
+C:\Users\user\source\repos\TurismoReal\TurismoReal\bin\Debug\RestSharp.xml
+C:\Users\user\source\repos\TurismoReal\TurismoReal\obj\Debug\TurismoReal.csproj.CopyComplete
