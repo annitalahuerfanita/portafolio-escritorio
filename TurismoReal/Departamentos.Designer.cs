@@ -37,6 +37,7 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lbBuscar = new System.Windows.Forms.Label();
             this.gbDatos = new System.Windows.Forms.GroupBox();
+            this.cbZona = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.txtPrecio = new System.Windows.Forms.TextBox();
@@ -51,7 +52,6 @@
             this.lbDorm = new System.Windows.Forms.Label();
             this.txtMetros = new System.Windows.Forms.TextBox();
             this.rtbMostrar = new System.Windows.Forms.RichTextBox();
-            this.cbZona = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgDeptos)).BeginInit();
             this.gbDatos.SuspendLayout();
             this.SuspendLayout();
@@ -141,6 +141,7 @@
             this.btnEditar.TabIndex = 44;
             this.btnEditar.UseCompatibleTextRendering = true;
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // txtBuscar
             // 
@@ -191,6 +192,21 @@
             this.gbDatos.TabIndex = 49;
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Datos Departamento";
+            // 
+            // cbZona
+            // 
+            this.cbZona.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbZona.FormattingEnabled = true;
+            this.cbZona.Items.AddRange(new object[] {
+            "Norte",
+            "Sur",
+            "Este",
+            "Oeste"});
+            this.cbZona.Location = new System.Drawing.Point(172, 114);
+            this.cbZona.Name = "cbZona";
+            this.cbZona.Size = new System.Drawing.Size(170, 28);
+            this.cbZona.TabIndex = 2;
+            this.cbZona.Text = "Seleccionar zona";
             // 
             // label1
             // 
@@ -355,21 +371,6 @@
             this.rtbMostrar.Size = new System.Drawing.Size(674, 280);
             this.rtbMostrar.TabIndex = 50;
             this.rtbMostrar.Text = "";
-            // 
-            // cbZona
-            // 
-            this.cbZona.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbZona.FormattingEnabled = true;
-            this.cbZona.Items.AddRange(new object[] {
-            "Norte",
-            "Sur",
-            "Este",
-            "Oeste"});
-            this.cbZona.Location = new System.Drawing.Point(172, 114);
-            this.cbZona.Name = "cbZona";
-            this.cbZona.Size = new System.Drawing.Size(170, 28);
-            this.cbZona.TabIndex = 2;
-            this.cbZona.Text = " Seleccionar zona";
             // 
             // Departamentos
             // 

@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiPost.cs" />
+    <Compile Include="ApiPut.cs" />
     <Compile Include="RestHelper.cs" />
     <Compile Include="Departamentos.cs">
       <SubType>Form</SubType>
