@@ -46,16 +46,14 @@
             this.gbDatos = new System.Windows.Forms.GroupBox();
             this.rbInactivo = new System.Windows.Forms.RadioButton();
             this.rbActivo = new System.Windows.Forms.RadioButton();
-            this.gbEstado = new System.Windows.Forms.GroupBox();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.lbEstado = new System.Windows.Forms.Label();
             this.dgFunc = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnMostrar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lbBuscar = new System.Windows.Forms.Label();
-            this.rtbMostrar = new System.Windows.Forms.RichTextBox();
             this.gbDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgFunc)).BeginInit();
             this.SuspendLayout();
@@ -67,7 +65,7 @@
             this.lbNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.lbNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNombre.Location = new System.Drawing.Point(17, 46);
+            this.lbNombre.Location = new System.Drawing.Point(12, 46);
             this.lbNombre.Name = "lbNombre";
             this.lbNombre.Size = new System.Drawing.Size(68, 20);
             this.lbNombre.TabIndex = 0;
@@ -77,18 +75,18 @@
             // 
             this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(172, 44);
+            this.txtNombre.Location = new System.Drawing.Point(164, 44);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(170, 24);
+            this.txtNombre.Size = new System.Drawing.Size(175, 24);
             this.txtNombre.TabIndex = 1;
             // 
             // txtApellido
             // 
             this.txtApellido.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido.Location = new System.Drawing.Point(172, 87);
+            this.txtApellido.Location = new System.Drawing.Point(164, 87);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(170, 24);
+            this.txtApellido.Size = new System.Drawing.Size(175, 24);
             this.txtApellido.TabIndex = 10;
             // 
             // lbApellido
@@ -98,7 +96,7 @@
             this.lbApellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.lbApellido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbApellido.Location = new System.Drawing.Point(17, 89);
+            this.lbApellido.Location = new System.Drawing.Point(12, 89);
             this.lbApellido.Name = "lbApellido";
             this.lbApellido.Size = new System.Drawing.Size(68, 20);
             this.lbApellido.TabIndex = 9;
@@ -108,9 +106,9 @@
             // 
             this.txtEdad.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtEdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEdad.Location = new System.Drawing.Point(172, 130);
+            this.txtEdad.Location = new System.Drawing.Point(164, 130);
             this.txtEdad.Name = "txtEdad";
-            this.txtEdad.Size = new System.Drawing.Size(170, 24);
+            this.txtEdad.Size = new System.Drawing.Size(175, 24);
             this.txtEdad.TabIndex = 12;
             // 
             // lbEdad
@@ -120,7 +118,7 @@
             this.lbEdad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.lbEdad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbEdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEdad.Location = new System.Drawing.Point(17, 132);
+            this.lbEdad.Location = new System.Drawing.Point(12, 132);
             this.lbEdad.Name = "lbEdad";
             this.lbEdad.Size = new System.Drawing.Size(47, 20);
             this.lbEdad.TabIndex = 11;
@@ -130,9 +128,9 @@
             // 
             this.txtFono.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtFono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFono.Location = new System.Drawing.Point(172, 173);
+            this.txtFono.Location = new System.Drawing.Point(164, 173);
             this.txtFono.Name = "txtFono";
-            this.txtFono.Size = new System.Drawing.Size(170, 24);
+            this.txtFono.Size = new System.Drawing.Size(175, 24);
             this.txtFono.TabIndex = 14;
             // 
             // lbFono
@@ -142,7 +140,7 @@
             this.lbFono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.lbFono.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbFono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbFono.Location = new System.Drawing.Point(17, 175);
+            this.lbFono.Location = new System.Drawing.Point(12, 175);
             this.lbFono.Name = "lbFono";
             this.lbFono.Size = new System.Drawing.Size(73, 20);
             this.lbFono.TabIndex = 13;
@@ -152,9 +150,9 @@
             // 
             this.txtCorreo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.Location = new System.Drawing.Point(172, 216);
+            this.txtCorreo.Location = new System.Drawing.Point(164, 216);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(170, 24);
+            this.txtCorreo.Size = new System.Drawing.Size(175, 24);
             this.txtCorreo.TabIndex = 16;
             // 
             // lbCorreo
@@ -164,7 +162,7 @@
             this.lbCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.lbCorreo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCorreo.Location = new System.Drawing.Point(17, 218);
+            this.lbCorreo.Location = new System.Drawing.Point(12, 218);
             this.lbCorreo.Name = "lbCorreo";
             this.lbCorreo.Size = new System.Drawing.Size(131, 20);
             this.lbCorreo.TabIndex = 15;
@@ -174,9 +172,9 @@
             // 
             this.txtEmp.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmp.Location = new System.Drawing.Point(172, 259);
+            this.txtEmp.Location = new System.Drawing.Point(164, 259);
             this.txtEmp.Name = "txtEmp";
-            this.txtEmp.Size = new System.Drawing.Size(170, 24);
+            this.txtEmp.Size = new System.Drawing.Size(175, 24);
             this.txtEmp.TabIndex = 19;
             // 
             // lbEmp
@@ -186,7 +184,7 @@
             this.lbEmp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.lbEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEmp.Location = new System.Drawing.Point(17, 261);
+            this.lbEmp.Location = new System.Drawing.Point(12, 261);
             this.lbEmp.Name = "lbEmp";
             this.lbEmp.Size = new System.Drawing.Size(132, 20);
             this.lbEmp.TabIndex = 18;
@@ -196,9 +194,9 @@
             // 
             this.txtCont.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCont.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCont.Location = new System.Drawing.Point(172, 302);
+            this.txtCont.Location = new System.Drawing.Point(164, 302);
             this.txtCont.Name = "txtCont";
-            this.txtCont.Size = new System.Drawing.Size(170, 24);
+            this.txtCont.Size = new System.Drawing.Size(175, 24);
             this.txtCont.TabIndex = 21;
             // 
             // lbCont
@@ -208,7 +206,7 @@
             this.lbCont.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.lbCont.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbCont.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCont.Location = new System.Drawing.Point(17, 304);
+            this.lbCont.Location = new System.Drawing.Point(12, 304);
             this.lbCont.Name = "lbCont";
             this.lbCont.Size = new System.Drawing.Size(95, 20);
             this.lbCont.TabIndex = 20;
@@ -220,7 +218,7 @@
             this.gbDatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.gbDatos.Controls.Add(this.rbInactivo);
             this.gbDatos.Controls.Add(this.rbActivo);
-            this.gbDatos.Controls.Add(this.gbEstado);
+            this.gbDatos.Controls.Add(this.btnEditar);
             this.gbDatos.Controls.Add(this.btnAgregar);
             this.gbDatos.Controls.Add(this.lbEstado);
             this.gbDatos.Controls.Add(this.txtCont);
@@ -239,9 +237,9 @@
             this.gbDatos.Controls.Add(this.txtEdad);
             this.gbDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbDatos.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatos.Location = new System.Drawing.Point(-7, 37);
+            this.gbDatos.Location = new System.Drawing.Point(-12, 37);
             this.gbDatos.Name = "gbDatos";
-            this.gbDatos.Size = new System.Drawing.Size(380, 471);
+            this.gbDatos.Size = new System.Drawing.Size(355, 471);
             this.gbDatos.TabIndex = 22;
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Datos Funcionario";
@@ -251,7 +249,7 @@
             this.rbInactivo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rbInactivo.AutoSize = true;
             this.rbInactivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.rbInactivo.Location = new System.Drawing.Point(258, 346);
+            this.rbInactivo.Location = new System.Drawing.Point(260, 346);
             this.rbInactivo.Name = "rbInactivo";
             this.rbInactivo.Size = new System.Drawing.Size(79, 22);
             this.rbInactivo.TabIndex = 26;
@@ -264,7 +262,7 @@
             this.rbActivo.AutoSize = true;
             this.rbActivo.Checked = true;
             this.rbActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.rbActivo.Location = new System.Drawing.Point(176, 346);
+            this.rbActivo.Location = new System.Drawing.Point(168, 346);
             this.rbActivo.Name = "rbActivo";
             this.rbActivo.Size = new System.Drawing.Size(69, 22);
             this.rbActivo.TabIndex = 23;
@@ -272,30 +270,41 @@
             this.rbActivo.Text = "Activo";
             this.rbActivo.UseVisualStyleBackColor = true;
             // 
-            // gbEstado
+            // btnEditar
             // 
-            this.gbEstado.Location = new System.Drawing.Point(170, 329);
-            this.gbEstado.Name = "gbEstado";
-            this.gbEstado.Size = new System.Drawing.Size(172, 46);
-            this.gbEstado.TabIndex = 28;
-            this.gbEstado.TabStop = false;
+            this.btnEditar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(217)))), ((int)(((byte)(103)))));
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
+            this.btnEditar.ForeColor = System.Drawing.Color.White;
+            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
+            this.btnEditar.Location = new System.Drawing.Point(187, 400);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(152, 48);
+            this.btnEditar.TabIndex = 51;
+            this.btnEditar.Text = "    MODIFICAR";
+            this.btnEditar.UseCompatibleTextRendering = true;
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnAgregar
             // 
             this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(196)))), ((int)(((byte)(107)))));
             this.btnAgregar.FlatAppearance.BorderSize = 0;
             this.btnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
-            this.btnAgregar.Location = new System.Drawing.Point(98, 396);
+            this.btnAgregar.Location = new System.Drawing.Point(13, 400);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnAgregar.Size = new System.Drawing.Size(168, 56);
+            this.btnAgregar.Size = new System.Drawing.Size(152, 48);
             this.btnAgregar.TabIndex = 27;
-            this.btnAgregar.Text = "    AGREGAR";
+            this.btnAgregar.Text = "   AGREGAR";
             this.btnAgregar.UseCompatibleTextRendering = true;
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -307,7 +316,7 @@
             this.lbEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.lbEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEstado.Location = new System.Drawing.Point(17, 347);
+            this.lbEstado.Location = new System.Drawing.Point(12, 347);
             this.lbEstado.Name = "lbEstado";
             this.lbEstado.Size = new System.Drawing.Size(61, 20);
             this.lbEstado.TabIndex = 24;
@@ -317,12 +326,15 @@
             // 
             this.dgFunc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgFunc.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
-            this.dgFunc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgFunc.Location = new System.Drawing.Point(393, 433);
+            this.dgFunc.ColumnHeadersHeight = 24;
+            this.dgFunc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgFunc.Location = new System.Drawing.Point(363, 85);
+            this.dgFunc.MultiSelect = false;
             this.dgFunc.Name = "dgFunc";
+            this.dgFunc.RowHeadersVisible = false;
             this.dgFunc.RowHeadersWidth = 51;
-            this.dgFunc.RowTemplate.Height = 24;
-            this.dgFunc.Size = new System.Drawing.Size(674, 75);
+            this.dgFunc.RowTemplate.Height = 30;
+            this.dgFunc.Size = new System.Drawing.Size(740, 422);
             this.dgFunc.TabIndex = 24;
             // 
             // btnBuscar
@@ -335,10 +347,10 @@
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold);
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(650, 32);
+            this.btnBuscar.Location = new System.Drawing.Point(730, 33);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(0);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(57, 41);
+            this.btnBuscar.Size = new System.Drawing.Size(56, 40);
             this.btnBuscar.TabIndex = 54;
             this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnBuscar.UseCompatibleTextRendering = true;
@@ -355,40 +367,23 @@
             this.btnMostrar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold);
             this.btnMostrar.ForeColor = System.Drawing.Color.White;
             this.btnMostrar.Image = ((System.Drawing.Image)(resources.GetObject("btnMostrar.Image")));
-            this.btnMostrar.Location = new System.Drawing.Point(898, 32);
+            this.btnMostrar.Location = new System.Drawing.Point(791, 33);
             this.btnMostrar.Name = "btnMostrar";
-            this.btnMostrar.Size = new System.Drawing.Size(153, 43);
+            this.btnMostrar.Size = new System.Drawing.Size(154, 40);
             this.btnMostrar.TabIndex = 52;
-            this.btnMostrar.Text = "       MOSTRAR";
+            this.btnMostrar.Text = "     ACTUALIZAR";
             this.btnMostrar.UseCompatibleTextRendering = true;
             this.btnMostrar.UseVisualStyleBackColor = false;
             this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(217)))), ((int)(((byte)(103)))));
-            this.btnEditar.FlatAppearance.BorderSize = 0;
-            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold);
-            this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
-            this.btnEditar.Location = new System.Drawing.Point(712, 32);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(57, 41);
-            this.btnEditar.TabIndex = 51;
-            this.btnEditar.UseCompatibleTextRendering = true;
-            this.btnEditar.UseVisualStyleBackColor = false;
             // 
             // txtBuscar
             // 
             this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.ForeColor = System.Drawing.Color.Black;
-            this.txtBuscar.Location = new System.Drawing.Point(504, 41);
+            this.txtBuscar.Location = new System.Drawing.Point(575, 41);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(140, 26);
+            this.txtBuscar.Size = new System.Drawing.Size(150, 26);
             this.txtBuscar.TabIndex = 49;
             // 
             // lbBuscar
@@ -398,19 +393,11 @@
             this.lbBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.lbBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBuscar.Location = new System.Drawing.Point(422, 42);
+            this.lbBuscar.Location = new System.Drawing.Point(493, 42);
             this.lbBuscar.Name = "lbBuscar";
             this.lbBuscar.Size = new System.Drawing.Size(79, 25);
             this.lbBuscar.TabIndex = 50;
             this.lbBuscar.Text = "Buscar:";
-            // 
-            // rtbMostrar
-            // 
-            this.rtbMostrar.Location = new System.Drawing.Point(427, 95);
-            this.rtbMostrar.Name = "rtbMostrar";
-            this.rtbMostrar.Size = new System.Drawing.Size(674, 280);
-            this.rtbMostrar.TabIndex = 55;
-            this.rtbMostrar.Text = "";
             // 
             // Funcionarios
             // 
@@ -418,10 +405,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(1060, 545);
-            this.Controls.Add(this.rtbMostrar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnMostrar);
-            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.lbBuscar);
             this.Controls.Add(this.dgFunc);
@@ -439,32 +424,30 @@
 
         #endregion
 
+        private System.Windows.Forms.GroupBox gbDatos;
         private System.Windows.Forms.Label lbNombre;
+        private System.Windows.Forms.Label lbApellido;
+        private System.Windows.Forms.Label lbEdad;
+        private System.Windows.Forms.Label lbFono;
+        private System.Windows.Forms.Label lbCorreo;
+        private System.Windows.Forms.Label lbEmp;
+        private System.Windows.Forms.Label lbCont;
+        private System.Windows.Forms.Label lbEstado;
+        private System.Windows.Forms.Label lbBuscar;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtApellido;
-        private System.Windows.Forms.Label lbApellido;
         private System.Windows.Forms.TextBox txtEdad;
-        private System.Windows.Forms.Label lbEdad;
         private System.Windows.Forms.TextBox txtFono;
-        private System.Windows.Forms.Label lbFono;
         private System.Windows.Forms.TextBox txtCorreo;
-        private System.Windows.Forms.Label lbCorreo;
         private System.Windows.Forms.TextBox txtEmp;
-        private System.Windows.Forms.Label lbEmp;
         private System.Windows.Forms.TextBox txtCont;
-        private System.Windows.Forms.Label lbCont;
-        private System.Windows.Forms.GroupBox gbDatos;
-        private System.Windows.Forms.RadioButton rbInactivo;
-        private System.Windows.Forms.RadioButton rbActivo;
-        private System.Windows.Forms.Label lbEstado;
+        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.DataGridView dgFunc;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnMostrar;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.Label lbBuscar;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.RichTextBox rtbMostrar;
-        private System.Windows.Forms.GroupBox gbEstado;
+        private System.Windows.Forms.RadioButton rbInactivo;
+        private System.Windows.Forms.RadioButton rbActivo;
     }
 }

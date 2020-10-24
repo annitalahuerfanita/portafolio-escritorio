@@ -2,14 +2,16 @@
 using RestSharp;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using System.Windows.Forms;
 
 namespace TurismoReal
 {
-    //---BTN AGREGAR---
     public class ApiPost
     {
         public dynamic Agregar(string url, string json, string autorizacion = null)

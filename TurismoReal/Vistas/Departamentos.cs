@@ -16,12 +16,14 @@ namespace TurismoReal
     {
         private ApiPost _apiPost;
         private ApiPut _apiPut;
+
+        #region CONSTRUCTOR
         public Departamentos()
         {
             InitializeComponent();
+            MostrarDepto();
             _apiPost = new ApiPost();
             _apiPut = new ApiPut();
-            MostrarDepto();
         }
         public class Departamento
         {
@@ -33,6 +35,18 @@ namespace TurismoReal
             public int precio { get; set; }
             public int metros_cuadrados { get; set; }
         }
+        public class Departamentoget
+        {
+            public int id { get; set; }
+            public string direccion { get; set; }
+            public string zona { get; set; }
+            public int banos { get; set; }
+            public int dormitorios { get; set; }
+            public bool estado_mantencion { get; set; }
+            public int precio { get; set; }
+            public int metros_cuadrados { get; set; }
+        }
+        #endregion
 
         #region EVENTOS
         private void btnMostrar_Click(object sender, EventArgs e)
@@ -86,16 +100,30 @@ namespace TurismoReal
         #endregion
 
         #region METODOS
-        public async void MostrarDepto()
+        private async void MostrarDepto()
         {
             var response = await RestHelper.MostrarDepto();
-            rtbMostrar.Text = RestHelper.LectorJson(response);
+            var result = JsonConvert.DeserializeObject<List<Departamentoget>>(response);
+            dgDeptos.DataSource = result;
+            dgDeptos.Columns[0].HeaderText = "id";
+            dgDeptos.Columns[0].Width = 30;
+            dgDeptos.Columns[1].HeaderText = "Dirección";
+            dgDeptos.Columns[1].Width = 150;
+            dgDeptos.Columns[2].HeaderText = "Zona";
+            dgDeptos.Columns[2].Width = 70;
+            dgDeptos.Columns[3].HeaderText = "Baños";
+            dgDeptos.Columns[3].Width = 70;
+            dgDeptos.Columns[4].HeaderText = "Dormitorios";
+            dgDeptos.Columns[4].Width = 70;
+            dgDeptos.Columns[5].Visible = false;
+            dgDeptos.Columns[6].HeaderText = "Precio";
+            dgDeptos.Columns[6].Width = 70;
         }
 
         private async void BuscarDepto()
         {
             var response = await RestHelper.BuscarDepto(txtBuscar.Text);
-            rtbMostrar.Text = RestHelper.LectorJson(response);
+            //rtbMostrar.Text = RestHelper.LectorJson(response);
             var datos = JsonConvert.DeserializeObject<Departamento>(response);
             this.txtBanos.Text = datos.banos.ToString();
             this.txtDireccion.Text = datos.direccion;
@@ -162,7 +190,7 @@ namespace TurismoReal
         public async void EliminarDepto()
         {
             var response = await Eliminar(txtBuscar.Text);
-            rtbMostrar.Text = response;
+            //rtbMostrar.Text = response;
             LimpiarCampos();
         }
 
@@ -174,7 +202,7 @@ namespace TurismoReal
             this.txtDorm.Text = "";
             this.txtMetros.Text = "";
             this.txtPrecio.Text = "";
-            this.cbZona.Text = " Seleccionar zona";
+            this.cbZona.Text = "Seleccionar zona";
         }
         #endregion
     }
