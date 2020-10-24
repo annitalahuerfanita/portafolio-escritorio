@@ -37,6 +37,7 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lbBuscar = new System.Windows.Forms.Label();
             this.gbDatos = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.cbZona = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -51,7 +52,6 @@
             this.lbZona = new System.Windows.Forms.Label();
             this.lbDorm = new System.Windows.Forms.Label();
             this.txtMetros = new System.Windows.Forms.TextBox();
-            this.rtbMostrar = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgDeptos)).BeginInit();
             this.gbDatos.SuspendLayout();
             this.SuspendLayout();
@@ -66,10 +66,10 @@
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold);
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(650, 32);
+            this.btnBuscar.Location = new System.Drawing.Point(779, 12);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(0);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(57, 41);
+            this.btnBuscar.Size = new System.Drawing.Size(56, 40);
             this.btnBuscar.TabIndex = 48;
             this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnBuscar.UseCompatibleTextRendering = true;
@@ -86,9 +86,9 @@
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold);
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.Location = new System.Drawing.Point(773, 32);
+            this.btnEliminar.Location = new System.Drawing.Point(268, 386);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(57, 41);
+            this.btnEliminar.Size = new System.Drawing.Size(70, 48);
             this.btnEliminar.TabIndex = 47;
             this.btnEliminar.UseCompatibleTextRendering = true;
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -104,11 +104,11 @@
             this.btnMostrar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold);
             this.btnMostrar.ForeColor = System.Drawing.Color.White;
             this.btnMostrar.Image = ((System.Drawing.Image)(resources.GetObject("btnMostrar.Image")));
-            this.btnMostrar.Location = new System.Drawing.Point(898, 32);
+            this.btnMostrar.Location = new System.Drawing.Point(855, 12);
             this.btnMostrar.Name = "btnMostrar";
-            this.btnMostrar.Size = new System.Drawing.Size(153, 43);
+            this.btnMostrar.Size = new System.Drawing.Size(154, 40);
             this.btnMostrar.TabIndex = 46;
-            this.btnMostrar.Text = "       MOSTRAR";
+            this.btnMostrar.Text = "     ACTUALIZAR";
             this.btnMostrar.UseCompatibleTextRendering = true;
             this.btnMostrar.UseVisualStyleBackColor = false;
             this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
@@ -118,11 +118,12 @@
             this.dgDeptos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgDeptos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.dgDeptos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgDeptos.Location = new System.Drawing.Point(393, 377);
+            this.dgDeptos.Location = new System.Drawing.Point(363, 85);
             this.dgDeptos.Name = "dgDeptos";
+            this.dgDeptos.RowHeadersVisible = false;
             this.dgDeptos.RowHeadersWidth = 51;
             this.dgDeptos.RowTemplate.Height = 24;
-            this.dgDeptos.Size = new System.Drawing.Size(674, 131);
+            this.dgDeptos.Size = new System.Drawing.Size(739, 422);
             this.dgDeptos.TabIndex = 45;
             // 
             // btnEditar
@@ -135,9 +136,9 @@
             this.btnEditar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold);
             this.btnEditar.ForeColor = System.Drawing.Color.White;
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
-            this.btnEditar.Location = new System.Drawing.Point(712, 32);
+            this.btnEditar.Location = new System.Drawing.Point(188, 386);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(57, 41);
+            this.btnEditar.Size = new System.Drawing.Size(70, 48);
             this.btnEditar.TabIndex = 44;
             this.btnEditar.UseCompatibleTextRendering = true;
             this.btnEditar.UseVisualStyleBackColor = false;
@@ -148,9 +149,9 @@
             this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.ForeColor = System.Drawing.Color.Black;
-            this.txtBuscar.Location = new System.Drawing.Point(504, 41);
+            this.txtBuscar.Location = new System.Drawing.Point(585, 22);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(140, 26);
+            this.txtBuscar.Size = new System.Drawing.Size(150, 26);
             this.txtBuscar.TabIndex = 42;
             // 
             // lbBuscar
@@ -160,7 +161,7 @@
             this.lbBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.lbBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBuscar.Location = new System.Drawing.Point(422, 42);
+            this.lbBuscar.Location = new System.Drawing.Point(483, 23);
             this.lbBuscar.Name = "lbBuscar";
             this.lbBuscar.Size = new System.Drawing.Size(79, 25);
             this.lbBuscar.TabIndex = 43;
@@ -170,12 +171,15 @@
             // 
             this.gbDatos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gbDatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.gbDatos.Controls.Add(this.label2);
             this.gbDatos.Controls.Add(this.cbZona);
             this.gbDatos.Controls.Add(this.label1);
             this.gbDatos.Controls.Add(this.btnAgregar);
+            this.gbDatos.Controls.Add(this.btnEliminar);
             this.gbDatos.Controls.Add(this.txtPrecio);
             this.gbDatos.Controls.Add(this.lbDireccion);
             this.gbDatos.Controls.Add(this.lbPrecio);
+            this.gbDatos.Controls.Add(this.btnEditar);
             this.gbDatos.Controls.Add(this.txtDireccion);
             this.gbDatos.Controls.Add(this.txtBanos);
             this.gbDatos.Controls.Add(this.lbMetros);
@@ -186,12 +190,25 @@
             this.gbDatos.Controls.Add(this.txtMetros);
             this.gbDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbDatos.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatos.Location = new System.Drawing.Point(-7, 37);
+            this.gbDatos.Location = new System.Drawing.Point(-12, 37);
             this.gbDatos.Name = "gbDatos";
-            this.gbDatos.Size = new System.Drawing.Size(380, 471);
+            this.gbDatos.Size = new System.Drawing.Size(355, 471);
             this.gbDatos.TabIndex = 49;
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Datos Departamento";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label2.Location = new System.Drawing.Point(159, 318);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(23, 25);
+            this.label2.TabIndex = 48;
+            this.label2.Text = "$";
             // 
             // cbZona
             // 
@@ -202,9 +219,9 @@
             "Sur",
             "Este",
             "Oeste"});
-            this.cbZona.Location = new System.Drawing.Point(172, 114);
+            this.cbZona.Location = new System.Drawing.Point(164, 114);
             this.cbZona.Name = "cbZona";
-            this.cbZona.Size = new System.Drawing.Size(170, 28);
+            this.cbZona.Size = new System.Drawing.Size(175, 28);
             this.cbZona.TabIndex = 2;
             this.cbZona.Text = "Seleccionar zona";
             // 
@@ -215,7 +232,7 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(77, 168);
+            this.label1.Location = new System.Drawing.Point(59, 168);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(13, 13);
             this.label1.TabIndex = 27;
@@ -224,17 +241,17 @@
             // btnAgregar
             // 
             this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(196)))), ((int)(((byte)(107)))));
             this.btnAgregar.FlatAppearance.BorderSize = 0;
             this.btnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
-            this.btnAgregar.Location = new System.Drawing.Point(99, 387);
+            this.btnAgregar.Location = new System.Drawing.Point(16, 386);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnAgregar.Size = new System.Drawing.Size(168, 56);
+            this.btnAgregar.Size = new System.Drawing.Size(152, 48);
             this.btnAgregar.TabIndex = 8;
             this.btnAgregar.Text = "    AGREGAR";
             this.btnAgregar.UseCompatibleTextRendering = true;
@@ -245,9 +262,9 @@
             // 
             this.txtPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecio.Location = new System.Drawing.Point(172, 319);
+            this.txtPrecio.Location = new System.Drawing.Point(188, 319);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(170, 24);
+            this.txtPrecio.Size = new System.Drawing.Size(150, 24);
             this.txtPrecio.TabIndex = 6;
             // 
             // lbDireccion
@@ -257,7 +274,7 @@
             this.lbDireccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.lbDireccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDireccion.Location = new System.Drawing.Point(17, 66);
+            this.lbDireccion.Location = new System.Drawing.Point(12, 66);
             this.lbDireccion.Name = "lbDireccion";
             this.lbDireccion.Size = new System.Drawing.Size(81, 20);
             this.lbDireccion.TabIndex = 0;
@@ -270,7 +287,7 @@
             this.lbPrecio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.lbPrecio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPrecio.Location = new System.Drawing.Point(17, 321);
+            this.lbPrecio.Location = new System.Drawing.Point(12, 321);
             this.lbPrecio.Name = "lbPrecio";
             this.lbPrecio.Size = new System.Drawing.Size(103, 20);
             this.lbPrecio.TabIndex = 18;
@@ -280,18 +297,18 @@
             // 
             this.txtDireccion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Location = new System.Drawing.Point(172, 64);
+            this.txtDireccion.Location = new System.Drawing.Point(164, 64);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(170, 24);
+            this.txtDireccion.Size = new System.Drawing.Size(175, 24);
             this.txtDireccion.TabIndex = 1;
             // 
             // txtBanos
             // 
             this.txtBanos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBanos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBanos.Location = new System.Drawing.Point(172, 268);
+            this.txtBanos.Location = new System.Drawing.Point(164, 266);
             this.txtBanos.Name = "txtBanos";
-            this.txtBanos.Size = new System.Drawing.Size(170, 24);
+            this.txtBanos.Size = new System.Drawing.Size(175, 24);
             this.txtBanos.TabIndex = 5;
             // 
             // lbMetros
@@ -301,7 +318,7 @@
             this.lbMetros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.lbMetros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbMetros.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMetros.Location = new System.Drawing.Point(17, 168);
+            this.lbMetros.Location = new System.Drawing.Point(12, 168);
             this.lbMetros.Name = "lbMetros";
             this.lbMetros.Size = new System.Drawing.Size(61, 20);
             this.lbMetros.TabIndex = 9;
@@ -314,7 +331,7 @@
             this.lbBanos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.lbBanos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbBanos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBanos.Location = new System.Drawing.Point(17, 270);
+            this.lbBanos.Location = new System.Drawing.Point(12, 270);
             this.lbBanos.Name = "lbBanos";
             this.lbBanos.Size = new System.Drawing.Size(57, 20);
             this.lbBanos.TabIndex = 15;
@@ -324,9 +341,9 @@
             // 
             this.txtDorm.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDorm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDorm.Location = new System.Drawing.Point(172, 217);
+            this.txtDorm.Location = new System.Drawing.Point(164, 215);
             this.txtDorm.Name = "txtDorm";
-            this.txtDorm.Size = new System.Drawing.Size(170, 24);
+            this.txtDorm.Size = new System.Drawing.Size(175, 24);
             this.txtDorm.TabIndex = 4;
             // 
             // lbZona
@@ -336,7 +353,7 @@
             this.lbZona.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.lbZona.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbZona.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbZona.Location = new System.Drawing.Point(17, 117);
+            this.lbZona.Location = new System.Drawing.Point(12, 117);
             this.lbZona.Name = "lbZona";
             this.lbZona.Size = new System.Drawing.Size(45, 20);
             this.lbZona.TabIndex = 11;
@@ -349,7 +366,7 @@
             this.lbDorm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.lbDorm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbDorm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDorm.Location = new System.Drawing.Point(17, 219);
+            this.lbDorm.Location = new System.Drawing.Point(12, 219);
             this.lbDorm.Name = "lbDorm";
             this.lbDorm.Size = new System.Drawing.Size(97, 20);
             this.lbDorm.TabIndex = 13;
@@ -359,18 +376,10 @@
             // 
             this.txtMetros.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtMetros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMetros.Location = new System.Drawing.Point(172, 166);
+            this.txtMetros.Location = new System.Drawing.Point(164, 164);
             this.txtMetros.Name = "txtMetros";
-            this.txtMetros.Size = new System.Drawing.Size(170, 24);
+            this.txtMetros.Size = new System.Drawing.Size(175, 24);
             this.txtMetros.TabIndex = 3;
-            // 
-            // rtbMostrar
-            // 
-            this.rtbMostrar.Location = new System.Drawing.Point(427, 81);
-            this.rtbMostrar.Name = "rtbMostrar";
-            this.rtbMostrar.Size = new System.Drawing.Size(674, 280);
-            this.rtbMostrar.TabIndex = 50;
-            this.rtbMostrar.Text = "";
             // 
             // Departamentos
             // 
@@ -378,13 +387,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(1060, 545);
-            this.Controls.Add(this.rtbMostrar);
             this.Controls.Add(this.gbDatos);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.dgDeptos);
-            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.lbBuscar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -421,7 +427,7 @@
         private System.Windows.Forms.Label lbZona;
         private System.Windows.Forms.Label lbDorm;
         private System.Windows.Forms.TextBox txtMetros;
-        private System.Windows.Forms.RichTextBox rtbMostrar;
         private System.Windows.Forms.ComboBox cbZona;
+        private System.Windows.Forms.Label label2;
     }
 }
