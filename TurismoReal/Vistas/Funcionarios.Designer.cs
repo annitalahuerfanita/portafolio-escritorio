@@ -249,7 +249,7 @@
             this.rbInactivo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rbInactivo.AutoSize = true;
             this.rbInactivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.rbInactivo.Location = new System.Drawing.Point(260, 346);
+            this.rbInactivo.Location = new System.Drawing.Point(259, 346);
             this.rbInactivo.Name = "rbInactivo";
             this.rbInactivo.Size = new System.Drawing.Size(79, 22);
             this.rbInactivo.TabIndex = 26;
@@ -262,7 +262,7 @@
             this.rbActivo.AutoSize = true;
             this.rbActivo.Checked = true;
             this.rbActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.rbActivo.Location = new System.Drawing.Point(168, 346);
+            this.rbActivo.Location = new System.Drawing.Point(169, 346);
             this.rbActivo.Name = "rbActivo";
             this.rbActivo.Size = new System.Drawing.Size(69, 22);
             this.rbActivo.TabIndex = 23;
@@ -334,7 +334,7 @@
             this.dgFunc.RowHeadersVisible = false;
             this.dgFunc.RowHeadersWidth = 51;
             this.dgFunc.RowTemplate.Height = 30;
-            this.dgFunc.Size = new System.Drawing.Size(740, 422);
+            this.dgFunc.Size = new System.Drawing.Size(685, 422);
             this.dgFunc.TabIndex = 24;
             // 
             // btnBuscar

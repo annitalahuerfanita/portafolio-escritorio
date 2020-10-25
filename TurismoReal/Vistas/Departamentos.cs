@@ -21,7 +21,7 @@ namespace TurismoReal
         public Departamentos()
         {
             InitializeComponent();
-            MostrarDepto();
+            MostrarDepto(false);
             _apiPost = new ApiPost();
             _apiPut = new ApiPut();
         }
@@ -51,7 +51,7 @@ namespace TurismoReal
         #region EVENTOS
         private void btnMostrar_Click(object sender, EventArgs e)
         {
-            MostrarDepto();
+            MostrarDepto(false);
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -76,7 +76,7 @@ namespace TurismoReal
             {
                 AgregarDepto();
                 LimpiarCampos();
-                MostrarDepto();
+                MostrarDepto(false);
             }
         }
 
@@ -100,7 +100,7 @@ namespace TurismoReal
         #endregion
 
         #region METODOS
-        private async void MostrarDepto()
+        private async void MostrarDepto(bool filtro)
         {
             var response = await RestHelper.MostrarDepto();
             var result = JsonConvert.DeserializeObject<List<Departamentoget>>(response);
@@ -118,6 +118,14 @@ namespace TurismoReal
             dgDeptos.Columns[5].Visible = false;
             dgDeptos.Columns[6].HeaderText = "Precio";
             dgDeptos.Columns[6].Width = 70;
+            if (filtro == true)
+            {
+                dgDeptos.CurrentCell = null;
+                foreach (DataGridViewRow fila in dgDeptos.Rows)
+                {
+                    fila.Visible = fila.Cells["id"].Value.ToString().ToUpper().Equals(txtBuscar.Text.ToUpper());
+                }
+            }
         }
 
         private async void BuscarDepto()
@@ -131,6 +139,7 @@ namespace TurismoReal
             this.txtMetros.Text = datos.metros_cuadrados.ToString();
             this.txtPrecio.Text = datos.precio.ToString();
             this.cbZona.Text = datos.zona;
+            MostrarDepto(true);
         }
 
         private void AgregarDepto()
@@ -190,8 +199,8 @@ namespace TurismoReal
         public async void EliminarDepto()
         {
             var response = await Eliminar(txtBuscar.Text);
-            //rtbMostrar.Text = response;
             LimpiarCampos();
+            MostrarDepto(false);
         }
 
         public void LimpiarCampos()
