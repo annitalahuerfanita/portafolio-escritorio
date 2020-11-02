@@ -103,46 +103,44 @@ namespace TurismoReal
         }
         #endregion
 
-        #region METODOS 
-
-    
+        #region METODOS           
         private async void MostrarFunc(bool filtro)
         {
             var response = await RestHelper.MostrarFunc();
             var result = JsonConvert.DeserializeObject<List<Funcionarioget>>(response);
             dgFunc.DataSource = result;
-            dgFunc.Columns[0].HeaderText = "id";
-            dgFunc.Columns[0].Width = 30;
+            dgFunc.Columns[0].HeaderText = "Id";
+            dgFunc.Columns[0].Width = 26;
             dgFunc.Columns[1].HeaderText = "Nombre";
-            dgFunc.Columns[1].Width = 100;
+            dgFunc.Columns[1].Width = 65;
             dgFunc.Columns[2].HeaderText = "Apellido";
-            dgFunc.Columns[2].Width = 100;
-            dgFunc.Columns[3].HeaderText = "Estado";
-            dgFunc.Columns[3].Width = 50;
+            dgFunc.Columns[2].Width = 65;
+            dgFunc.Columns[3].HeaderText = "Activo";
+            dgFunc.Columns[3].Width = 60;
             dgFunc.Columns[4].Visible = false;
             dgFunc.Columns[5].HeaderText = "Teléfono";
-            dgFunc.Columns[5].Width = 80;
+            dgFunc.Columns[5].Width = 70;
             dgFunc.Columns[6].HeaderText = "Edad";
-            dgFunc.Columns[6].Width = 50;
+            dgFunc.Columns[6].Width = 40;
             dgFunc.Columns[7].HeaderText = "Correo personal";
-            dgFunc.Columns[7].Width = 100;
+            dgFunc.Columns[7].Width = 130;
             dgFunc.Columns[8].HeaderText = "Correo empresarial";
-            dgFunc.Columns[8].Width = 100;
-            dgFunc.Columns[9].HeaderText = "Contraseña";
-            dgFunc.Columns[9].Width = 80;
+            dgFunc.Columns[8].Width = 130;
+            dgFunc.Columns[9].HeaderText = "Clave";
+            dgFunc.Columns[9].Width = 42;
             foreach (DataGridViewRow fila in dgFunc.Rows)
             {
-                fila.Cells["password"].Value = "********";
+                fila.Cells["password"].Value = "*****";
             }
-            dgFunc.Columns["is_active"].Visible = false;
-            DataGridViewTextBoxColumn textColumn = new DataGridViewTextBoxColumn();
-            textColumn.Name = "Estado";
-            dgFunc.Columns.Add(textColumn);
-            dgFunc.Columns["Estado"].DisplayIndex = 3;
-            foreach (DataGridViewRow fila in dgFunc.Rows.Cast<DataGridViewRow>())
-            {
-                fila.Cells["Estado"].Value = (bool)fila.Cells["is_active"].Value ? "Activo" : "Inactivo";
-            }
+            //dgFunc.Columns["is_active"].Visible = false;
+            //DataGridViewTextBoxColumn textColumn = new DataGridViewTextBoxColumn();
+            //textColumn.Name = "Estado";
+            //dgFunc.Columns.Add(textColumn);
+            //dgFunc.Columns["Estado"].DisplayIndex = 3;
+            //foreach (DataGridViewRow fila in dgFunc.Rows.Cast<DataGridViewRow>())
+            //{
+            //    fila.Cells["Estado"].Value = (bool)fila.Cells["is_active"].Value ? "Activo" : "Inactivo";
+            //}
             if (filtro == true)
             {
                 dgFunc.CurrentCell = null;
@@ -184,7 +182,7 @@ namespace TurismoReal
                 password = txtCont.Text
             };
             string json = JsonConvert.SerializeObject(func);
-            dynamic respuesta = _apiPost.Agregar("https://departamentos.pythonanywhere.com/api/usuarios/", json);
+            dynamic respuesta = _apiPost.Agregar("http://192.168.100.50/api/usuarios/", json);
             MessageBox.Show($"Usuario {func.first_name + " " + func.last_name} agregado correctamente", "¡Éxito!");
         }
 
@@ -206,17 +204,16 @@ namespace TurismoReal
             {
                 func.is_active = false;
             }
-
             var response = await RestHelper.BuscarFunc(txtBuscar.Text);
             var datos = JsonConvert.DeserializeObject<Funcionario>(response);
             if (func.password == "")
             {
-                MessageBox.Show($"Para modificar el usuario se necesita cambiar la clave", "¡Error!");
+                MessageBox.Show($"Para modificar el usuario se necesita cambiar la contraseña", "¡Error!");
             }
             else
             {
                 string json = JsonConvert.SerializeObject(func);
-                dynamic respuesta = _apiPut.Modificar($"https://departamentos.pythonanywhere.com/api/usuarios/{txtBuscar.Text}/", json);
+                dynamic respuesta = _apiPut.Modificar($"http://192.168.100.50/api/usuarios/{txtBuscar.Text}/", json);
                 MessageBox.Show($"Usuario {func.first_name + " " + func.last_name} modificado correctamente", "¡Éxito!");
                 MostrarFunc(true);
             }

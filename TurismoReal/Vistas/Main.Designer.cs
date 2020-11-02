@@ -56,7 +56,7 @@
             this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitulo.Location = new System.Drawing.Point(240, 0);
             this.panelTitulo.Name = "panelTitulo";
-            this.panelTitulo.Size = new System.Drawing.Size(1060, 95);
+            this.panelTitulo.Size = new System.Drawing.Size(1160, 95);
             this.panelTitulo.TabIndex = 1;
             // 
             // lbTitulo
@@ -65,7 +65,7 @@
             this.lbTitulo.AutoSize = true;
             this.lbTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitulo.ForeColor = System.Drawing.Color.White;
-            this.lbTitulo.Location = new System.Drawing.Point(414, 32);
+            this.lbTitulo.Location = new System.Drawing.Point(464, 32);
             this.lbTitulo.Name = "lbTitulo";
             this.lbTitulo.Size = new System.Drawing.Size(218, 31);
             this.lbTitulo.TabIndex = 4;
@@ -80,7 +80,7 @@
             this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMin.Font = new System.Drawing.Font("Segoe UI Black", 11F, System.Drawing.FontStyle.Bold);
             this.btnMin.ForeColor = System.Drawing.Color.White;
-            this.btnMin.Location = new System.Drawing.Point(959, 0);
+            this.btnMin.Location = new System.Drawing.Point(1059, 0);
             this.btnMin.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
             this.btnMin.Name = "btnMin";
             this.btnMin.Size = new System.Drawing.Size(50, 34);
@@ -99,7 +99,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Segoe UI Black", 11F, System.Drawing.FontStyle.Bold);
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(1010, 0);
+            this.btnClose.Location = new System.Drawing.Point(1110, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(50, 34);
             this.btnClose.TabIndex = 0;
@@ -114,7 +114,7 @@
             this.panelCentral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCentral.Location = new System.Drawing.Point(240, 95);
             this.panelCentral.Name = "panelCentral";
-            this.panelCentral.Size = new System.Drawing.Size(1060, 545);
+            this.panelCentral.Size = new System.Drawing.Size(1160, 605);
             this.panelCentral.TabIndex = 2;
             // 
             // btnDeptos
@@ -168,7 +168,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(240, 640);
+            this.panelMenu.Size = new System.Drawing.Size(240, 700);
             this.panelMenu.TabIndex = 0;
             // 
             // panelUser
@@ -177,7 +177,7 @@
             this.panelUser.Controls.Add(this.pictureBox1);
             this.panelUser.Controls.Add(this.lbUser);
             this.panelUser.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelUser.Location = new System.Drawing.Point(0, 560);
+            this.panelUser.Location = new System.Drawing.Point(0, 620);
             this.panelUser.Name = "panelUser";
             this.panelUser.Size = new System.Drawing.Size(240, 80);
             this.panelUser.TabIndex = 2;
@@ -218,7 +218,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1300, 640);
+            this.ClientSize = new System.Drawing.Size(1400, 700);
             this.Controls.Add(this.panelCentral);
             this.Controls.Add(this.panelTitulo);
             this.Controls.Add(this.panelMenu);
