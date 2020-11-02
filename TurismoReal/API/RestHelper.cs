@@ -16,7 +16,7 @@ namespace TurismoReal
 {
     public static class RestHelper
     {
-        private static readonly string baseURL = "https://departamentos.pythonanywhere.com/api/";
+        private static readonly string baseURL = "http://192.168.100.50/api/";
         public static string LectorJson(string jsonStr)
         {
             JToken parseJson = JToken.Parse(jsonStr);
@@ -37,7 +37,6 @@ namespace TurismoReal
                         {
                             return data;
                         }
-
                     }
                 }
             }
@@ -78,7 +77,6 @@ namespace TurismoReal
                         {
                             return data;
                         }
-
                     }
                 }
             }

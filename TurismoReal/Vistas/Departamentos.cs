@@ -105,10 +105,10 @@ namespace TurismoReal
             var response = await RestHelper.MostrarDepto();
             var result = JsonConvert.DeserializeObject<List<Departamentoget>>(response);
             dgDeptos.DataSource = result;
-            dgDeptos.Columns[0].HeaderText = "id";
-            dgDeptos.Columns[0].Width = 30;
+            dgDeptos.Columns[0].HeaderText = "Id";
+            dgDeptos.Columns[0].Width = 26;
             dgDeptos.Columns[1].HeaderText = "Dirección";
-            dgDeptos.Columns[1].Width = 150;
+            dgDeptos.Columns[1].Width = 180;
             dgDeptos.Columns[2].HeaderText = "Zona";
             dgDeptos.Columns[2].Width = 70;
             dgDeptos.Columns[3].HeaderText = "Baños";
@@ -116,8 +116,10 @@ namespace TurismoReal
             dgDeptos.Columns[4].HeaderText = "Dormitorios";
             dgDeptos.Columns[4].Width = 70;
             dgDeptos.Columns[5].Visible = false;
-            dgDeptos.Columns[6].HeaderText = "Precio";
-            dgDeptos.Columns[6].Width = 70;
+            dgDeptos.Columns[6].HeaderText = "Precio diario";
+            dgDeptos.Columns[6].Width = 100;
+            dgDeptos.Columns[7].HeaderText = "Metros²";
+            dgDeptos.Columns[7].Width = 70;
             if (filtro == true)
             {
                 dgDeptos.CurrentCell = null;
@@ -155,7 +157,7 @@ namespace TurismoReal
                 metros_cuadrados = int.Parse(txtMetros.Text)
             };
             string json = JsonConvert.SerializeObject(depto);
-            dynamic respuesta = _apiPost.Agregar("https://departamentos.pythonanywhere.com/api/departamentos/", json);
+            dynamic respuesta = _apiPost.Agregar("http://192.168.100.50/api/departamentos/", json);
             MessageBox.Show($"Departamento {depto.direccion} agregado correctamente", "¡Éxito!");
         }
 
@@ -172,7 +174,7 @@ namespace TurismoReal
                 metros_cuadrados = int.Parse(txtMetros.Text)
             };
             string json = JsonConvert.SerializeObject(depto);
-            dynamic respuesta = _apiPut.Modificar($"https://departamentos.pythonanywhere.com/api/departamentos/{txtBuscar.Text}/", json);
+            dynamic respuesta = _apiPut.Modificar($"http://192.168.100.50/api/departamentos/{txtBuscar.Text}/", json);
             MessageBox.Show($"Departamento{depto.direccion} modificado correctamente", "¡Éxito!");
         }
            
@@ -180,7 +182,7 @@ namespace TurismoReal
         {
             using (HttpClient client = new HttpClient())
             {
-                using (HttpResponseMessage res = await client.DeleteAsync("https://departamentos.pythonanywhere.com/api/departamentos/" + id))
+                using (HttpResponseMessage res = await client.DeleteAsync("http://192.168.100.50/api/departamentos/" + id))
                 {
                     using (HttpContent content = res.Content)
                     {
