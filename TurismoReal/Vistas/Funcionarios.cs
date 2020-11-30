@@ -25,9 +25,9 @@ namespace TurismoReal
         {
             InitializeComponent();
             MostrarFunc(false);
+            EnableButtons();
             PlaceHolder();
-            rbActivo.Enabled = false;
-            rbInactivo.Enabled = false;
+            Colores();
             _apiPost = new ApiPost();
             _apiPut = new ApiPut();
         }
@@ -50,17 +50,20 @@ namespace TurismoReal
         private void btnMostrar_Click(object sender, EventArgs e)
         {
             MostrarFunc(false);
+            LimpiarCampos();
+            EnableButtons();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            if (txtBuscar.Text == "")
+            if (txtBuscar.Text == "Buscar por Id")
             {
                 MessageBox.Show("Ingrese un Id para buscar", "¡Error!");
             }
             else
             {
                 BuscarFunc();
+                DisableButtons();
             }
         }
 
@@ -90,6 +93,33 @@ namespace TurismoReal
                 LimpiarCampos();
             }
         }
+
+        private void dgFuncionario_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex == -1)
+            {
+                return;
+            }
+            dgFuncionario.Rows[e.RowIndex].Selected = true;
+            txtBuscar.Text = dgFuncionario.Rows[e.RowIndex].Cells["id"].Value.ToString();
+            txtBuscar.ForeColor = Color.Black;
+            txtApellido.Text = dgFuncionario.Rows[e.RowIndex].Cells["last_name"].Value.ToString();
+            txtNombre.Text = dgFuncionario.Rows[e.RowIndex].Cells["first_name"].Value.ToString();
+            txtEdad.Text = dgFuncionario.Rows[e.RowIndex].Cells["edad"].Value.ToString();
+            txtFono.Text = dgFuncionario.Rows[e.RowIndex].Cells["telefono"].Value.ToString();
+            txtCorreo.Text = dgFuncionario.Rows[e.RowIndex].Cells["email"].Value.ToString();
+            txtEmp.Text = dgFuncionario.Rows[e.RowIndex].Cells["username"].Value.ToString();
+            if (dgFuncionario.Rows[e.RowIndex].Cells["Estado"].Value.ToString() == "Inactivo")
+            {
+                rbInactivo.Checked = true;
+            }
+            else if (dgFuncionario.Rows[e.RowIndex].Cells["Estado"].Value.ToString() == "Activo")
+            {
+                rbActivo.Checked = true;
+            }
+            DisableButtons();
+        }
+
         public void OnGetFocus(object sender, EventArgs e)
         {
 
@@ -99,7 +129,6 @@ namespace TurismoReal
                 txtBuscar.ForeColor = Color.Black;
             }
         }
-
         public void OnLostFocus(object sender, EventArgs e)
         {
 
@@ -109,74 +138,68 @@ namespace TurismoReal
                 txtBuscar.ForeColor = Color.Gray;
             }
         }
+        //-----------
+        //INVENTARIO
 
-        private void dgFunc_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if(e.RowIndex == -1)
-            {
-                return;
-            }
-            dgFunc.Rows[e.RowIndex].Selected = true;
-            txtBuscar.Text = dgFunc.Rows[e.RowIndex].Cells["id"].Value.ToString();
-            txtBuscar.ForeColor = Color.Black;
-            txtApellido.Text = dgFunc.Rows[e.RowIndex].Cells["last_name"].Value.ToString();
-            txtCorreo.Text = dgFunc.Rows[e.RowIndex].Cells["email"].Value.ToString();
-            txtEdad.Text = dgFunc.Rows[e.RowIndex].Cells["edad"].Value.ToString();
-            txtEmp.Text = dgFunc.Rows[e.RowIndex].Cells["username"].Value.ToString();
-            txtFono.Text = dgFunc.Rows[e.RowIndex].Cells["telefono"].Value.ToString();
-            txtNombre.Text = dgFunc.Rows[e.RowIndex].Cells["first_name"].Value.ToString();
-        }
+        //private void dgFuncionario_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        //{
+        //    string valor = e.Value as string;
+
+        //    if (this.dgFuncionario.Columns[e.ColumnIndex].Name == "Estado")
+        //    {
+        //        if (valor == "Activo")
+        //            e.CellStyle.BackColor = Color.LightGreen;
+        //        else if (valor == "Inactivo")
+        //            e.CellStyle.BackColor = Color.LightSalmon;
+        //    }
+        //}
+        //-----------
         #endregion
 
         #region METODOS           
         private async void MostrarFunc(bool filtro)
         {
-            var response = await RestHelper.MostrarFunc();
+            var response = await RestHelper.MostrarFuncionario();
             var result = JsonConvert.DeserializeObject<List<Funcionario>>(response);
-            dgFunc.DataSource = result;
-            dgFunc.Columns["id"].HeaderText = "Id";
-            dgFunc.Columns["id"].Width = 28;
-            dgFunc.Columns["id"].DisplayIndex = 0;
-            dgFunc.Columns["first_name"].HeaderText = "Nombre";
-            dgFunc.Columns["first_name"].Width = 70;
-            dgFunc.Columns["first_name"].DisplayIndex = 1;
-            dgFunc.Columns["last_name"].HeaderText = "Apellido";
-            dgFunc.Columns["last_name"].Width = 70;
-            dgFunc.Columns["last_name"].DisplayIndex = 2;
-            dgFunc.Columns["edad"].HeaderText = "Edad";
-            dgFunc.Columns["edad"].Width = 40;
-            dgFunc.Columns["edad"].DisplayIndex = 3;
-            dgFunc.Columns["telefono"].HeaderText = "Teléfono";
-            dgFunc.Columns["telefono"].Width = 80;
-            dgFunc.Columns["telefono"].DisplayIndex = 4;
-            dgFunc.Columns["email"].HeaderText = "Correo personal";
-            dgFunc.Columns["email"].Width = 130;
-            dgFunc.Columns["email"].DisplayIndex = 5;
-            dgFunc.Columns["username"].HeaderText = "Correo empresarial";
-            dgFunc.Columns["username"].Width = 140;
-
-            dgFunc.Columns["username"].DisplayIndex = 6;
-            //dgFunc.Columns["is_active"].HeaderText = "Activo";
-            //dgFunc.Columns["is_active"].Width = 60;
-            //dgFunc.Columns["is_active"].DisplayIndex = 7;
-            dgFunc.Columns["is_staff"].Visible = false;
-            dgFunc.Columns["password"].Visible = false;
-
-            dgFunc.Columns["is_active"].Visible = false;
+            dgFuncionario.DataSource = result;
+            dgFuncionario.Columns["id"].HeaderText = "Id";
+            dgFuncionario.Columns["id"].Width = 28;
+            dgFuncionario.Columns["id"].DisplayIndex = 0;
+            dgFuncionario.Columns["first_name"].HeaderText = "Nombre";
+            dgFuncionario.Columns["first_name"].Width = 70;
+            dgFuncionario.Columns["first_name"].DisplayIndex = 1;
+            dgFuncionario.Columns["last_name"].HeaderText = "Apellido";
+            dgFuncionario.Columns["last_name"].Width = 70;
+            dgFuncionario.Columns["last_name"].DisplayIndex = 2;
+            dgFuncionario.Columns["edad"].HeaderText = "Edad";
+            dgFuncionario.Columns["edad"].Width = 40;
+            dgFuncionario.Columns["edad"].DisplayIndex = 3;
+            dgFuncionario.Columns["telefono"].HeaderText = "Teléfono";
+            dgFuncionario.Columns["telefono"].Width = 80;
+            dgFuncionario.Columns["telefono"].DisplayIndex = 4;
+            dgFuncionario.Columns["email"].HeaderText = "Correo personal";
+            dgFuncionario.Columns["email"].Width = 130;
+            dgFuncionario.Columns["email"].DisplayIndex = 5;
+            dgFuncionario.Columns["username"].HeaderText = "Correo empresarial";
+            dgFuncionario.Columns["username"].Width = 140;
+            dgFuncionario.Columns["username"].DisplayIndex = 6;
+            dgFuncionario.Columns["is_staff"].Visible = false;
+            dgFuncionario.Columns["password"].Visible = false;
+            dgFuncionario.Columns["is_active"].Visible = false;
             DataGridViewTextBoxColumn textColumn = new DataGridViewTextBoxColumn();
             textColumn.Name = "Estado";
-            dgFunc.Columns.Add(textColumn);
-            dgFunc.Columns["Estado"].Width = 60;
-            dgFunc.Columns["Estado"].DisplayIndex = 7;
-            foreach (DataGridViewRow fila in dgFunc.Rows.Cast<DataGridViewRow>())
+            dgFuncionario.Columns.Add(textColumn);
+            dgFuncionario.Columns["Estado"].Width = 60;
+            dgFuncionario.Columns["Estado"].DisplayIndex = 7;
+            foreach (DataGridViewRow fila in dgFuncionario.Rows.Cast<DataGridViewRow>())
             {
                 fila.Cells["Estado"].Value = (bool)fila.Cells["is_active"].Value ? "Activo" : "Inactivo";
             }
 
             if (filtro == true)
             {
-                dgFunc.CurrentCell = null;
-                foreach (DataGridViewRow fila in dgFunc.Rows)
+                dgFuncionario.CurrentCell = null;
+                foreach (DataGridViewRow fila in dgFuncionario.Rows)
                 {
                     fila.Visible = fila.Cells["id"].Value.ToString().ToUpper().Equals(txtBuscar.Text.ToUpper());
                 }
@@ -185,7 +208,7 @@ namespace TurismoReal
 
         private async void BuscarFunc()
         {
-            var response = await RestHelper.BuscarFunc(txtBuscar.Text);
+            var response = await RestHelper.BuscarFuncionario(txtBuscar.Text);
             var datos = JsonConvert.DeserializeObject<Funcionario>(response);
             this.txtNombre.Text = datos.first_name;
             this.txtApellido.Text = datos.last_name;
@@ -194,8 +217,6 @@ namespace TurismoReal
             this.txtCorreo.Text = datos.email;
             this.txtEmp.Text = datos.username;
             this.txtCont.Text ="";
-            this.rbActivo.Enabled = true;
-            this.rbInactivo.Enabled = true;
             if (datos.is_active == false)
             {
                 rbInactivo.Checked = true;
@@ -244,7 +265,7 @@ namespace TurismoReal
             {
                 func.is_active = false;
             }
-            var response = await RestHelper.BuscarFunc(txtBuscar.Text);
+            var response = await RestHelper.BuscarFuncionario(txtBuscar.Text);
             var datos = JsonConvert.DeserializeObject<Funcionario>(response);
             if (func.password == "")
             {
@@ -267,12 +288,40 @@ namespace TurismoReal
             this.txtEdad.Text = "";
             this.txtEmp.Text = "";
             this.txtFono.Text = "";
-            this.txtNombre.Text = "";
+            this.txtNombre.Text = ""; 
             this.rbActivo.Enabled = false;
             this.rbInactivo.Enabled = false;
-            //this.rbActivo.Checked = true;
-            //this.rbInactivo.Checked = false;
+            this.rbActivo.Checked = true;
         }
+
+        private void EnableButtons()
+        {
+            this.rbActivo.Enabled = false;
+            this.rbInactivo.Enabled = false;
+            this.rbActivo.Checked = true;
+
+            this.btnAgregar.Visible = true;
+            this.lbAgg.Visible = false;
+            this.pbDisableAgg.Visible = false;
+
+            this.btnEditar.Visible = false;
+            this.lbEdd.Visible = true;
+            this.pbDisableEdd.Visible = true;
+        }
+        private void DisableButtons()
+        {
+            this.rbActivo.Enabled = true;
+            this.rbInactivo.Enabled = true;
+
+            this.btnAgregar.Visible = false;
+            this.lbAgg.Visible = true;
+            this.pbDisableAgg.Visible = true;
+
+            this.btnEditar.Visible = true;
+            this.lbEdd.Visible = false;
+            this.pbDisableEdd.Visible = false;
+        }
+
         public void PlaceHolder()
         {
             txtBuscar.Tag = "Buscar por Id";
@@ -280,6 +329,12 @@ namespace TurismoReal
             txtBuscar.ForeColor = Color.Gray;
             txtBuscar.GotFocus += new EventHandler(OnGetFocus);
             txtBuscar.LostFocus += new EventHandler(OnLostFocus);
+        }
+
+        private void Colores()
+        {
+            dgFuncionario.RowsDefaultCellStyle.BackColor = Color.Gainsboro;
+            dgFuncionario.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
         }
         #endregion
     }

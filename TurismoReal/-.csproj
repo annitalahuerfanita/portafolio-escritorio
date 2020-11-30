@@ -56,11 +56,29 @@
     <Compile Include="API\ApiPost.cs" />
     <Compile Include="API\ApiPut.cs" />
     <Compile Include="API\RestHelper.cs" />
-    <Compile Include="Vistas\Departamentos.cs">
+    <Compile Include="Vistas\Disponible.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\Departamentos.Designer.cs">
-      <DependentUpon>Departamentos.cs</DependentUpon>
+    <Compile Include="Vistas\Disponible.Designer.cs">
+      <DependentUpon>Disponible.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\InventarioDisp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\InventarioDisp.Designer.cs">
+      <DependentUpon>InventarioDisp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\InventarioMant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\InventarioMant.Designer.cs">
+      <DependentUpon>InventarioMant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Mantencion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Mantencion.Designer.cs">
+      <DependentUpon>Mantencion.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Funcionarios.cs">
       <SubType>Form</SubType>
@@ -76,8 +94,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Vistas\Departamentos.resx">
-      <DependentUpon>Departamentos.cs</DependentUpon>
+    <EmbeddedResource Include="Vistas\Disponible.resx">
+      <DependentUpon>Disponible.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\InventarioDisp.resx">
+      <DependentUpon>InventarioDisp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\InventarioMant.resx">
+      <DependentUpon>InventarioMant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Mantencion.resx">
+      <DependentUpon>Mantencion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Funcionarios.resx">
       <DependentUpon>Funcionarios.cs</DependentUpon>
