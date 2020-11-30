@@ -1,6 +1,6 @@
 ﻿namespace TurismoReal
 {
-    partial class Departamentos
+    partial class Mantencion
     {
         /// <summary>
         /// Required designer variable.
@@ -28,28 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Departamentos));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mantencion));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
             this.btnMostrar = new System.Windows.Forms.Button();
-            this.dgDeptos = new System.Windows.Forms.DataGridView();
-            this.btnEditar = new System.Windows.Forms.Button();
+            this.dgMantencion = new System.Windows.Forms.DataGridView();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lbBuscar = new System.Windows.Forms.Label();
             this.gbDatos = new System.Windows.Forms.GroupBox();
+            this.pbDisableEll = new System.Windows.Forms.PictureBox();
+            this.pbDisableEdd = new System.Windows.Forms.PictureBox();
+            this.lbAgg = new System.Windows.Forms.Label();
+            this.pbDisableAgg = new System.Windows.Forms.PictureBox();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.gbEstado = new System.Windows.Forms.GroupBox();
             this.rbMant = new System.Windows.Forms.RadioButton();
             this.rbDisp = new System.Windows.Forms.RadioButton();
             this.lbEstado = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbPeso = new System.Windows.Forms.Label();
             this.cbZona = new System.Windows.Forms.ComboBox();
-            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.lbDireccion = new System.Windows.Forms.Label();
             this.lbPrecio = new System.Windows.Forms.Label();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.txtBanos = new System.Windows.Forms.TextBox();
             this.lbMetros = new System.Windows.Forms.Label();
@@ -58,8 +62,13 @@
             this.lbZona = new System.Windows.Forms.Label();
             this.lbDorm = new System.Windows.Forms.Label();
             this.txtMetros = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgDeptos)).BeginInit();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Inventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgMantencion)).BeginInit();
             this.gbDatos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDisableEll)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDisableEdd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDisableAgg)).BeginInit();
             this.gbEstado.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,30 +85,12 @@
             this.btnBuscar.Location = new System.Drawing.Point(745, 44);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(0);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(56, 40);
+            this.btnBuscar.Size = new System.Drawing.Size(56, 39);
             this.btnBuscar.TabIndex = 48;
             this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnBuscar.UseCompatibleTextRendering = true;
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(134)))), ((int)(((byte)(134)))));
-            this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold);
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.Location = new System.Drawing.Point(270, 450);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(70, 48);
-            this.btnEliminar.TabIndex = 47;
-            this.btnEliminar.UseCompatibleTextRendering = true;
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnMostrar
             // 
@@ -112,88 +103,73 @@
             this.btnMostrar.ForeColor = System.Drawing.Color.White;
             this.btnMostrar.Image = ((System.Drawing.Image)(resources.GetObject("btnMostrar.Image")));
             this.btnMostrar.Location = new System.Drawing.Point(831, 44);
+            this.btnMostrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMostrar.Name = "btnMostrar";
-            this.btnMostrar.Size = new System.Drawing.Size(154, 40);
+            this.btnMostrar.Size = new System.Drawing.Size(155, 39);
             this.btnMostrar.TabIndex = 46;
             this.btnMostrar.Text = "     ACTUALIZAR";
             this.btnMostrar.UseCompatibleTextRendering = true;
             this.btnMostrar.UseVisualStyleBackColor = false;
             this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
-            // dgDeptos
+            // dgMantencion
             // 
-            this.dgDeptos.AllowUserToAddRows = false;
-            this.dgDeptos.AllowUserToDeleteRows = false;
-            this.dgDeptos.AllowUserToOrderColumns = true;
-            this.dgDeptos.AllowUserToResizeColumns = false;
-            this.dgDeptos.AllowUserToResizeRows = false;
-            this.dgDeptos.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgDeptos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
-            this.dgDeptos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgDeptos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(208)))), ((int)(((byte)(228)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgDeptos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgDeptos.ColumnHeadersHeight = 30;
-            this.dgDeptos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(208)))), ((int)(((byte)(228)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgDeptos.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgDeptos.Location = new System.Drawing.Point(348, 107);
-            this.dgDeptos.Name = "dgDeptos";
-            this.dgDeptos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgDeptos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgDeptos.RowHeadersVisible = false;
-            this.dgDeptos.RowHeadersWidth = 51;
-            this.dgDeptos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgDeptos.RowTemplate.Height = 24;
-            this.dgDeptos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgDeptos.Size = new System.Drawing.Size(830, 456);
-            this.dgDeptos.TabIndex = 45;
-            this.dgDeptos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDeptos_CellClick);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(217)))), ((int)(((byte)(103)))));
-            this.btnEditar.FlatAppearance.BorderSize = 0;
-            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold);
-            this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
-            this.btnEditar.Location = new System.Drawing.Point(193, 450);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(70, 48);
-            this.btnEditar.TabIndex = 44;
-            this.btnEditar.UseCompatibleTextRendering = true;
-            this.btnEditar.UseVisualStyleBackColor = false;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            this.dgMantencion.AllowUserToDeleteRows = false;
+            this.dgMantencion.AllowUserToResizeColumns = false;
+            this.dgMantencion.AllowUserToResizeRows = false;
+            this.dgMantencion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgMantencion.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.dgMantencion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgMantencion.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(208)))), ((int)(((byte)(228)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgMantencion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgMantencion.ColumnHeadersHeight = 30;
+            this.dgMantencion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgMantencion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Estado,
+            this.Inventario});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(208)))), ((int)(((byte)(228)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgMantencion.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgMantencion.Location = new System.Drawing.Point(348, 107);
+            this.dgMantencion.MultiSelect = false;
+            this.dgMantencion.Name = "dgMantencion";
+            this.dgMantencion.ReadOnly = true;
+            this.dgMantencion.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgMantencion.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgMantencion.RowHeadersVisible = false;
+            this.dgMantencion.RowHeadersWidth = 51;
+            this.dgMantencion.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgMantencion.RowTemplate.Height = 24;
+            this.dgMantencion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgMantencion.Size = new System.Drawing.Size(829, 455);
+            this.dgMantencion.TabIndex = 45;
+            this.dgMantencion.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDeptos_CellClick);
+            this.dgMantencion.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDeptos_CellDoubleClick);
             // 
             // txtBuscar
             // 
             this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.ForeColor = System.Drawing.Color.Black;
-            this.txtBuscar.Location = new System.Drawing.Point(608, 51);
+            this.txtBuscar.Location = new System.Drawing.Point(608, 50);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(130, 26);
+            this.txtBuscar.Size = new System.Drawing.Size(129, 26);
             this.txtBuscar.TabIndex = 42;
             // 
             // lbBuscar
@@ -203,7 +179,7 @@
             this.lbBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
             this.lbBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBuscar.Location = new System.Drawing.Point(522, 52);
+            this.lbBuscar.Location = new System.Drawing.Point(523, 52);
             this.lbBuscar.Name = "lbBuscar";
             this.lbBuscar.Size = new System.Drawing.Size(84, 25);
             this.lbBuscar.TabIndex = 43;
@@ -213,11 +189,15 @@
             // 
             this.gbDatos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gbDatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.gbDatos.Controls.Add(this.pbDisableEll);
+            this.gbDatos.Controls.Add(this.pbDisableEdd);
+            this.gbDatos.Controls.Add(this.lbAgg);
+            this.gbDatos.Controls.Add(this.pbDisableAgg);
+            this.gbDatos.Controls.Add(this.btnAgregar);
             this.gbDatos.Controls.Add(this.gbEstado);
             this.gbDatos.Controls.Add(this.lbEstado);
-            this.gbDatos.Controls.Add(this.label2);
+            this.gbDatos.Controls.Add(this.lbPeso);
             this.gbDatos.Controls.Add(this.cbZona);
-            this.gbDatos.Controls.Add(this.btnAgregar);
             this.gbDatos.Controls.Add(this.btnEliminar);
             this.gbDatos.Controls.Add(this.txtPrecio);
             this.gbDatos.Controls.Add(this.lbDireccion);
@@ -234,19 +214,86 @@
             this.gbDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbDatos.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDatos.Location = new System.Drawing.Point(-20, 34);
+            this.gbDatos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbDatos.Name = "gbDatos";
+            this.gbDatos.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbDatos.Size = new System.Drawing.Size(360, 530);
             this.gbDatos.TabIndex = 49;
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Datos Departamento";
             // 
+            // pbDisableEll
+            // 
+            this.pbDisableEll.BackColor = System.Drawing.Color.LightGray;
+            this.pbDisableEll.Image = ((System.Drawing.Image)(resources.GetObject("pbDisableEll.Image")));
+            this.pbDisableEll.Location = new System.Drawing.Point(269, 448);
+            this.pbDisableEll.Name = "pbDisableEll";
+            this.pbDisableEll.Size = new System.Drawing.Size(69, 48);
+            this.pbDisableEll.TabIndex = 58;
+            this.pbDisableEll.TabStop = false;
+            // 
+            // pbDisableEdd
+            // 
+            this.pbDisableEdd.BackColor = System.Drawing.Color.LightGray;
+            this.pbDisableEdd.Image = ((System.Drawing.Image)(resources.GetObject("pbDisableEdd.Image")));
+            this.pbDisableEdd.Location = new System.Drawing.Point(193, 448);
+            this.pbDisableEdd.Name = "pbDisableEdd";
+            this.pbDisableEdd.Size = new System.Drawing.Size(69, 48);
+            this.pbDisableEdd.TabIndex = 57;
+            this.pbDisableEdd.TabStop = false;
+            // 
+            // lbAgg
+            // 
+            this.lbAgg.AutoSize = true;
+            this.lbAgg.BackColor = System.Drawing.Color.LightGray;
+            this.lbAgg.Font = new System.Drawing.Font("Microsoft YaHei", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAgg.ForeColor = System.Drawing.Color.DimGray;
+            this.lbAgg.Location = new System.Drawing.Point(60, 461);
+            this.lbAgg.Name = "lbAgg";
+            this.lbAgg.Size = new System.Drawing.Size(89, 22);
+            this.lbAgg.TabIndex = 56;
+            this.lbAgg.Text = "AGREGAR";
+            // 
+            // pbDisableAgg
+            // 
+            this.pbDisableAgg.BackColor = System.Drawing.Color.LightGray;
+            this.pbDisableAgg.Image = ((System.Drawing.Image)(resources.GetObject("pbDisableAgg.Image")));
+            this.pbDisableAgg.Location = new System.Drawing.Point(19, 448);
+            this.pbDisableAgg.Name = "pbDisableAgg";
+            this.pbDisableAgg.Size = new System.Drawing.Size(154, 48);
+            this.pbDisableAgg.TabIndex = 55;
+            this.pbDisableAgg.TabStop = false;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(196)))), ((int)(((byte)(107)))));
+            this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
+            this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
+            this.btnAgregar.Location = new System.Drawing.Point(19, 450);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnAgregar.Size = new System.Drawing.Size(152, 48);
+            this.btnAgregar.TabIndex = 8;
+            this.btnAgregar.Text = "   AGREGAR";
+            this.btnAgregar.UseCompatibleTextRendering = true;
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
             // gbEstado
             // 
             this.gbEstado.Controls.Add(this.rbMant);
             this.gbEstado.Controls.Add(this.rbDisp);
-            this.gbEstado.Location = new System.Drawing.Point(170, 336);
+            this.gbEstado.Location = new System.Drawing.Point(171, 336);
+            this.gbEstado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbEstado.Name = "gbEstado";
-            this.gbEstado.Size = new System.Drawing.Size(170, 90);
+            this.gbEstado.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbEstado.Size = new System.Drawing.Size(171, 90);
             this.gbEstado.TabIndex = 54;
             this.gbEstado.TabStop = false;
             // 
@@ -256,6 +303,7 @@
             this.rbMant.Checked = true;
             this.rbMant.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.rbMant.Location = new System.Drawing.Point(9, 23);
+            this.rbMant.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbMant.Name = "rbMant";
             this.rbMant.Size = new System.Drawing.Size(128, 22);
             this.rbMant.TabIndex = 52;
@@ -268,6 +316,7 @@
             this.rbDisp.AutoSize = true;
             this.rbDisp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.rbDisp.Location = new System.Drawing.Point(9, 55);
+            this.rbDisp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbDisp.Name = "rbDisp";
             this.rbDisp.Size = new System.Drawing.Size(98, 22);
             this.rbDisp.TabIndex = 53;
@@ -287,18 +336,18 @@
             this.lbEstado.TabIndex = 51;
             this.lbEstado.Text = "Estado";
             // 
-            // label2
+            // lbPeso
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(215, 300);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(23, 25);
-            this.label2.TabIndex = 48;
-            this.label2.Text = "$";
+            this.lbPeso.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbPeso.AutoSize = true;
+            this.lbPeso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.lbPeso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbPeso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbPeso.Location = new System.Drawing.Point(215, 300);
+            this.lbPeso.Name = "lbPeso";
+            this.lbPeso.Size = new System.Drawing.Size(23, 25);
+            this.lbPeso.TabIndex = 48;
+            this.lbPeso.Text = "$";
             // 
             // cbZona
             // 
@@ -310,38 +359,39 @@
             "Sur",
             "Este",
             "Oeste"});
-            this.cbZona.Location = new System.Drawing.Point(170, 98);
+            this.cbZona.Location = new System.Drawing.Point(171, 98);
+            this.cbZona.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbZona.Name = "cbZona";
-            this.cbZona.Size = new System.Drawing.Size(170, 28);
+            this.cbZona.Size = new System.Drawing.Size(169, 28);
             this.cbZona.TabIndex = 2;
             this.cbZona.Text = "Seleccionar zona";
             this.cbZona.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbZona_KeyPress);
             // 
-            // btnAgregar
+            // btnEliminar
             // 
-            this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(196)))), ((int)(((byte)(107)))));
-            this.btnAgregar.FlatAppearance.BorderSize = 0;
-            this.btnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
-            this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
-            this.btnAgregar.Location = new System.Drawing.Point(18, 450);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnAgregar.Size = new System.Drawing.Size(152, 48);
-            this.btnAgregar.TabIndex = 8;
-            this.btnAgregar.Text = "   AGREGAR";
-            this.btnAgregar.UseCompatibleTextRendering = true;
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(134)))), ((int)(((byte)(134)))));
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold);
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.Location = new System.Drawing.Point(269, 450);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(69, 48);
+            this.btnEliminar.TabIndex = 47;
+            this.btnEliminar.UseCompatibleTextRendering = true;
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // txtPrecio
             // 
             this.txtPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrecio.Location = new System.Drawing.Point(240, 300);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(100, 24);
             this.txtPrecio.TabIndex = 6;
@@ -372,13 +422,33 @@
             this.lbPrecio.TabIndex = 18;
             this.lbPrecio.Text = "Precio diario";
             // 
+            // btnEditar
+            // 
+            this.btnEditar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(217)))), ((int)(((byte)(103)))));
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold);
+            this.btnEditar.ForeColor = System.Drawing.Color.White;
+            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
+            this.btnEditar.Location = new System.Drawing.Point(193, 450);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(69, 48);
+            this.btnEditar.TabIndex = 44;
+            this.btnEditar.UseCompatibleTextRendering = true;
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
             // txtDireccion
             // 
             this.txtDireccion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Location = new System.Drawing.Point(170, 50);
+            this.txtDireccion.Location = new System.Drawing.Point(171, 50);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(170, 24);
+            this.txtDireccion.Size = new System.Drawing.Size(169, 24);
             this.txtDireccion.TabIndex = 1;
             // 
             // txtBanos
@@ -386,6 +456,7 @@
             this.txtBanos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBanos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBanos.Location = new System.Drawing.Point(240, 250);
+            this.txtBanos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBanos.Name = "txtBanos";
             this.txtBanos.Size = new System.Drawing.Size(100, 24);
             this.txtBanos.TabIndex = 5;
@@ -397,7 +468,7 @@
             this.lbMetros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.lbMetros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbMetros.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMetros.Location = new System.Drawing.Point(17, 152);
+            this.lbMetros.Location = new System.Drawing.Point(17, 153);
             this.lbMetros.Name = "lbMetros";
             this.lbMetros.Size = new System.Drawing.Size(72, 20);
             this.lbMetros.TabIndex = 9;
@@ -420,7 +491,8 @@
             // 
             this.txtDorm.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDorm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDorm.Location = new System.Drawing.Point(240, 200);
+            this.txtDorm.Location = new System.Drawing.Point(240, 199);
+            this.txtDorm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDorm.Name = "txtDorm";
             this.txtDorm.Size = new System.Drawing.Size(100, 24);
             this.txtDorm.TabIndex = 4;
@@ -456,28 +528,49 @@
             this.txtMetros.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtMetros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMetros.Location = new System.Drawing.Point(240, 150);
+            this.txtMetros.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMetros.Name = "txtMetros";
             this.txtMetros.Size = new System.Drawing.Size(100, 24);
             this.txtMetros.TabIndex = 3;
             // 
-            // Departamentos
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.MinimumWidth = 6;
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.Width = 80;
+            // 
+            // Inventario
+            // 
+            this.Inventario.HeaderText = "Inventario";
+            this.Inventario.MinimumWidth = 6;
+            this.Inventario.Name = "Inventario";
+            this.Inventario.ReadOnly = true;
+            this.Inventario.Width = 80;
+            // 
+            // Mantencion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(1160, 605);
+            this.ClientSize = new System.Drawing.Size(1160, 606);
             this.Controls.Add(this.gbDatos);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnMostrar);
-            this.Controls.Add(this.dgDeptos);
+            this.Controls.Add(this.dgMantencion);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.lbBuscar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Departamentos";
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "Mantencion";
             this.Text = "Departamentos";
-            ((System.ComponentModel.ISupportInitialize)(this.dgDeptos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgMantencion)).EndInit();
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDisableEll)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDisableEdd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDisableAgg)).EndInit();
             this.gbEstado.ResumeLayout(false);
             this.gbEstado.PerformLayout();
             this.ResumeLayout(false);
@@ -488,14 +581,11 @@
         #endregion
 
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnMostrar;
-        private System.Windows.Forms.DataGridView dgDeptos;
-        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.DataGridView dgMantencion;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lbBuscar;
         private System.Windows.Forms.GroupBox gbDatos;
-        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label lbDireccion;
         private System.Windows.Forms.Label lbPrecio;
@@ -508,10 +598,19 @@
         private System.Windows.Forms.Label lbDorm;
         private System.Windows.Forms.TextBox txtMetros;
         private System.Windows.Forms.ComboBox cbZona;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbPeso;
         private System.Windows.Forms.Label lbEstado;
         private System.Windows.Forms.RadioButton rbMant;
         private System.Windows.Forms.RadioButton rbDisp;
         private System.Windows.Forms.GroupBox gbEstado;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.PictureBox pbDisableAgg;
+        private System.Windows.Forms.Label lbAgg;
+        private System.Windows.Forms.PictureBox pbDisableEll;
+        private System.Windows.Forms.PictureBox pbDisableEdd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Inventario;
     }
 }

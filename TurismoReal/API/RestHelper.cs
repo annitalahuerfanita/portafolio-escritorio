@@ -24,11 +24,11 @@ namespace TurismoReal
         }
 
         #region API DEPARTAMENTOS
-        public static async Task<string> MostrarDepto()
+        public static async Task<string> MostrarMantencion()
         {
             using (HttpClient client = new HttpClient())
             {
-                using (HttpResponseMessage res = await client.GetAsync(baseURL + "departamentos"))
+                using (HttpResponseMessage res = await client.GetAsync(baseURL + "departamentos_mantencion"))
                 {
                     using (HttpContent content = res.Content)
                     {
@@ -43,11 +43,49 @@ namespace TurismoReal
             return string.Empty;
         }
 
-        public static async Task<string> BuscarDepto(string id)
+        public static async Task<string> BuscarMantencion(string id)
         {
             using (HttpClient client = new HttpClient())
             {
-                using (HttpResponseMessage res = await client.GetAsync(baseURL + "departamentos/" + id))
+                using (HttpResponseMessage res = await client.GetAsync(baseURL + "departamentos_mantencion/" + id))
+                {
+                    using (HttpContent content = res.Content)
+                    {
+                        string data = await content.ReadAsStringAsync();
+                        if (data != null)
+                        {
+                            return data;
+                        }
+                    }
+                }
+            }
+            return string.Empty;
+        }
+
+        public static async Task<string> MostrarDisponible()
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                using (HttpResponseMessage res = await client.GetAsync(baseURL + "departamentos_disponibles"))
+                {
+                    using (HttpContent content = res.Content)
+                    {
+                        string data = await content.ReadAsStringAsync();
+                        if (data != null)
+                        {
+                            return data;
+                        }
+                    }
+                }
+            }
+            return string.Empty;
+        }
+
+        public static async Task<string> BuscarDisponible(string id)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                using (HttpResponseMessage res = await client.GetAsync(baseURL + "departamentos_disponibles/" + id))
                 {
                     using (HttpContent content = res.Content)
                     {
@@ -64,7 +102,7 @@ namespace TurismoReal
         #endregion
 
         #region API FUNCIONARIOS
-        public static async Task<string> MostrarFunc()
+        public static async Task<string> MostrarFuncionario()
         {
             using (HttpClient client = new HttpClient())
             {
@@ -83,11 +121,32 @@ namespace TurismoReal
             return string.Empty;
         }
 
-        public static async Task<string> BuscarFunc(String id)
+        public static async Task<string> BuscarFuncionario(String id)
         {
             using (HttpClient client = new HttpClient())
             {
                 using (HttpResponseMessage res = await client.GetAsync(baseURL + "usuarios/" + id))
+                {
+                    using (HttpContent content = res.Content)
+                    {
+                        string data = await content.ReadAsStringAsync();
+                        if (data != null)
+                        {
+                            return data;
+                        }
+                    }
+                }
+            }
+            return string.Empty;
+        }
+        #endregion
+
+        #region API INVENTARIO
+        public static async Task<string> MostrarInventario()
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                using (HttpResponseMessage res = await client.GetAsync(baseURL + "inventario"))
                 {
                     using (HttpContent content = res.Content)
                     {

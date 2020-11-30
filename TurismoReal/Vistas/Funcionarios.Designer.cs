@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Funcionarios));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
@@ -52,14 +52,20 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.lbEstado = new System.Windows.Forms.Label();
-            this.dgFunc = new System.Windows.Forms.DataGridView();
+            this.dgFuncionario = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnMostrar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lbBuscar = new System.Windows.Forms.Label();
+            this.lbAgg = new System.Windows.Forms.Label();
+            this.pbDisableAgg = new System.Windows.Forms.PictureBox();
+            this.lbEdd = new System.Windows.Forms.Label();
+            this.pbDisableEdd = new System.Windows.Forms.PictureBox();
             this.gbDatos.SuspendLayout();
             this.gbEstado.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgFunc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgFuncionario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDisableAgg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDisableEdd)).BeginInit();
             this.SuspendLayout();
             // 
             // lbNombre
@@ -224,7 +230,11 @@
             // 
             this.gbDatos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gbDatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.gbDatos.Controls.Add(this.lbEdd);
+            this.gbDatos.Controls.Add(this.pbDisableEdd);
+            this.gbDatos.Controls.Add(this.lbAgg);
             this.gbDatos.Controls.Add(this.gbEstado);
+            this.gbDatos.Controls.Add(this.pbDisableAgg);
             this.gbDatos.Controls.Add(this.btnEditar);
             this.gbDatos.Controls.Add(this.btnAgregar);
             this.gbDatos.Controls.Add(this.lbEstado);
@@ -316,7 +326,7 @@
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
-            this.btnAgregar.Location = new System.Drawing.Point(18, 450);
+            this.btnAgregar.Location = new System.Drawing.Point(19, 450);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnAgregar.Size = new System.Drawing.Size(152, 48);
@@ -339,44 +349,47 @@
             this.lbEstado.TabIndex = 24;
             this.lbEstado.Text = "Estado";
             // 
-            // dgFunc
+            // dgFuncionario
             // 
-            this.dgFunc.AllowUserToAddRows = false;
-            this.dgFunc.AllowUserToDeleteRows = false;
-            this.dgFunc.AllowUserToResizeColumns = false;
-            this.dgFunc.AllowUserToResizeRows = false;
-            this.dgFunc.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgFunc.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
-            this.dgFunc.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgFunc.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(208)))), ((int)(((byte)(228)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgFunc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgFunc.ColumnHeadersHeight = 30;
-            this.dgFunc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(208)))), ((int)(((byte)(228)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgFunc.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgFunc.Location = new System.Drawing.Point(348, 107);
-            this.dgFunc.MultiSelect = false;
-            this.dgFunc.Name = "dgFunc";
-            this.dgFunc.RowHeadersVisible = false;
-            this.dgFunc.RowHeadersWidth = 51;
-            this.dgFunc.RowTemplate.Height = 30;
-            this.dgFunc.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgFunc.Size = new System.Drawing.Size(830, 456);
-            this.dgFunc.TabIndex = 24;
-            this.dgFunc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgFunc_CellClick);
+            this.dgFuncionario.AllowUserToAddRows = false;
+            this.dgFuncionario.AllowUserToDeleteRows = false;
+            this.dgFuncionario.AllowUserToResizeColumns = false;
+            this.dgFuncionario.AllowUserToResizeRows = false;
+            this.dgFuncionario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgFuncionario.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.dgFuncionario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgFuncionario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(208)))), ((int)(((byte)(228)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgFuncionario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgFuncionario.ColumnHeadersHeight = 30;
+            this.dgFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(208)))), ((int)(((byte)(228)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgFuncionario.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgFuncionario.Location = new System.Drawing.Point(348, 107);
+            this.dgFuncionario.MultiSelect = false;
+            this.dgFuncionario.Name = "dgFuncionario";
+            this.dgFuncionario.ReadOnly = true;
+            this.dgFuncionario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.dgFuncionario.RowHeadersVisible = false;
+            this.dgFuncionario.RowHeadersWidth = 51;
+            this.dgFuncionario.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgFuncionario.RowTemplate.Height = 30;
+            this.dgFuncionario.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgFuncionario.Size = new System.Drawing.Size(830, 456);
+            this.dgFuncionario.TabIndex = 24;
+            this.dgFuncionario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgFuncionario_CellClick);
             // 
             // btnBuscar
             // 
@@ -441,6 +454,50 @@
             this.lbBuscar.TabIndex = 50;
             this.lbBuscar.Text = "Buscar :";
             // 
+            // lbAgg
+            // 
+            this.lbAgg.AutoSize = true;
+            this.lbAgg.BackColor = System.Drawing.Color.LightGray;
+            this.lbAgg.Font = new System.Drawing.Font("Microsoft YaHei", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAgg.ForeColor = System.Drawing.Color.DimGray;
+            this.lbAgg.Location = new System.Drawing.Point(60, 461);
+            this.lbAgg.Name = "lbAgg";
+            this.lbAgg.Size = new System.Drawing.Size(89, 22);
+            this.lbAgg.TabIndex = 58;
+            this.lbAgg.Text = "AGREGAR";
+            // 
+            // pbDisableAgg
+            // 
+            this.pbDisableAgg.BackColor = System.Drawing.Color.LightGray;
+            this.pbDisableAgg.Image = ((System.Drawing.Image)(resources.GetObject("pbDisableAgg.Image")));
+            this.pbDisableAgg.Location = new System.Drawing.Point(19, 448);
+            this.pbDisableAgg.Name = "pbDisableAgg";
+            this.pbDisableAgg.Size = new System.Drawing.Size(154, 48);
+            this.pbDisableAgg.TabIndex = 57;
+            this.pbDisableAgg.TabStop = false;
+            // 
+            // lbEdd
+            // 
+            this.lbEdd.AutoSize = true;
+            this.lbEdd.BackColor = System.Drawing.Color.LightGray;
+            this.lbEdd.Font = new System.Drawing.Font("Microsoft YaHei", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEdd.ForeColor = System.Drawing.Color.DimGray;
+            this.lbEdd.Location = new System.Drawing.Point(222, 461);
+            this.lbEdd.Name = "lbEdd";
+            this.lbEdd.Size = new System.Drawing.Size(105, 22);
+            this.lbEdd.TabIndex = 60;
+            this.lbEdd.Text = "MODIFICAR";
+            // 
+            // pbDisableEdd
+            // 
+            this.pbDisableEdd.BackColor = System.Drawing.Color.LightGray;
+            this.pbDisableEdd.Image = ((System.Drawing.Image)(resources.GetObject("pbDisableEdd.Image")));
+            this.pbDisableEdd.Location = new System.Drawing.Point(187, 448);
+            this.pbDisableEdd.Name = "pbDisableEdd";
+            this.pbDisableEdd.Size = new System.Drawing.Size(154, 48);
+            this.pbDisableEdd.TabIndex = 59;
+            this.pbDisableEdd.TabStop = false;
+            // 
             // Funcionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -451,7 +508,7 @@
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.lbBuscar);
-            this.Controls.Add(this.dgFunc);
+            this.Controls.Add(this.dgFuncionario);
             this.Controls.Add(this.gbDatos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Funcionarios";
@@ -460,7 +517,9 @@
             this.gbDatos.PerformLayout();
             this.gbEstado.ResumeLayout(false);
             this.gbEstado.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgFunc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgFuncionario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDisableAgg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDisableEdd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -486,7 +545,7 @@
         private System.Windows.Forms.TextBox txtEmp;
         private System.Windows.Forms.TextBox txtCont;
         private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.DataGridView dgFunc;
+        private System.Windows.Forms.DataGridView dgFuncionario;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnMostrar;
         private System.Windows.Forms.Button btnEditar;
@@ -494,5 +553,9 @@
         private System.Windows.Forms.RadioButton rbInactivo;
         private System.Windows.Forms.RadioButton rbActivo;
         private System.Windows.Forms.GroupBox gbEstado;
+        private System.Windows.Forms.Label lbAgg;
+        private System.Windows.Forms.Label lbEdd;
+        private System.Windows.Forms.PictureBox pbDisableEdd;
+        private System.Windows.Forms.PictureBox pbDisableAgg;
     }
 }

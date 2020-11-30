@@ -8,7 +8,6 @@ C:\Users\user\source\repos\TurismoReal\TurismoReal\obj\Debug\TurismoReal.csproj.
 C:\Users\user\source\repos\TurismoReal\TurismoReal\obj\Debug\TurismoReal.exe
 C:\Users\user\source\repos\TurismoReal\TurismoReal\obj\Debug\TurismoReal.pdb
 C:\Users\user\source\repos\TurismoReal\TurismoReal\obj\Debug\TurismoReal.Main.resources
-C:\Users\user\source\repos\TurismoReal\TurismoReal\obj\Debug\TurismoReal.Departamentos.resources
 C:\Users\user\source\repos\TurismoReal\TurismoReal\obj\Debug\TurismoReal.Funcionarios.resources
 C:\Users\aceve\source\repos\TurismoReal\TurismoReal\bin\Debug\TurismoReal.exe.config
 C:\Users\aceve\source\repos\TurismoReal\TurismoReal\bin\Debug\TurismoReal.exe
@@ -32,3 +31,5 @@ C:\Users\user\source\repos\TurismoReal\TurismoReal\bin\Debug\RestSharp.dll
 C:\Users\user\source\repos\TurismoReal\TurismoReal\bin\Debug\Newtonsoft.Json.xml
 C:\Users\user\source\repos\TurismoReal\TurismoReal\bin\Debug\RestSharp.xml
 C:\Users\user\source\repos\TurismoReal\TurismoReal\obj\Debug\TurismoReal.csproj.CopyComplete
+C:\Users\user\source\repos\TurismoReal\TurismoReal\obj\Debug\TurismoReal.Mantencion.resources
+C:\Users\user\source\repos\TurismoReal\TurismoReal\obj\Debug\TurismoReal.Vistas.Disponibles.resources
